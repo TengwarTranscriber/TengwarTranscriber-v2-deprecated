@@ -1,1 +1,6 @@
 theme: jekyll-theme-cayman
+
+title:        MEDavy
+tagline:      Amateur coder and web designer
+baseurl:      ""
+paginate:     1
