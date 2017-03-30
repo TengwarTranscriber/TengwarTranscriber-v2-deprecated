@@ -2,55 +2,13 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Tengwar Feanor Elvish Transcriber | Home</title>
+    <title>TFET | About the Tengwar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     
-    <style type="text/css">
-		  body {
-			text-rendering: optimizeLegibility;
-			font-feature-settings: "kern";
-			-moz-font-feature-settings: "kern=1";
-			-ms-font-feature-settings: "kern";
-			-webkit-font-feature-settings: "kern";
-			-o-font-feature-settings: "kern";
-		  }
-
-		  @font-face {
-			  font-family: 'Tengwar Feanor RegularSVG';
-			  src: url('tengwarfeanorregular.svg#Tengwar Feanor Regular') format('svg');
-		  }
-	
-		  @font-face {
-			  font-family: 'Tengwar Feanor RegularTTF';
-			  src: url('tengwarfeanorregular.ttf') format('truetype');
-		  } 
-		
-		  @font-face {
-			  font-family: 'Tengwar Feanor RegularEOT';
-			  src: url('Tengwar Feanor Regular.eot');
-		  } 
-		  div {
-			  font-family: 'Tengwar Feanor RegularEOT', 'Tengwar Feanor RegularTTF', 'Tengwar Feanor RegularSVG';
-			  margin: 30px 0 30px 0;
-		  }
-		  textarea#output {
-			  font-family: 'Tengwar Feanor RegularEOT', 'Tengwar Feanor RegularTTF', 'Tengwar Feanor RegularSVG';
-  			font-size: 20pt;
-		  } 
-	</style>
-    <script language="JavaScript">
-     <!-- Begin
-       function Go(input)
-      {
-     document.getElementById('Output').innerHTML = input;
-      }
-
-     //  End -->
-     </script>
   </head>
   <body>
     <section class="page-header">
@@ -67,45 +25,7 @@
     </section>
 
     <section class="main-content">
-	<p>Be sure to check out the <a href="/dwarvish">Dwarvish Transcriber</a> and  articles on <a href="/abouttengwar.html">Elvish</a> and <a href="/aboutdwarvish.html">Dwarvish</a>.<br>
-You can download Elvish and Dwarvish font files from the menu above.<br>
-Please comment or leave feedback on the <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/issues">Feedback page</a>.</p>
 	
-<div id="Inputs" style="margin:15px;">
-	<default style="margin:0 15px 0 0; font-family:Times New Roman;">Type in the text field below to transcribe</default>
-	<textarea style="margin: 0px; height: 175px; width: 100%; font-family: Times New Roman;" id="Input">Text entered here will be tranScribed</textarea>
-</div>
-<div id="Results" style="margin:15px;">
-  <default style="margin:0 15px 0 0; font-family:Times New Roman;">Transcribed text will appear here</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
-  <div style="margin:15px 0 15px 0;">
-  
- 
-  <textarea style="margin: 0px; height: 162px; width: 100%; font-family:Tengwar Feanor RegularTTF;" id="Output" class="h1" readonly="">Text Entered here will be tranScribed</textarea></div>
-</div>
-
-
-  <script language="JavaScript">
-     <!-- Begin
-       var Go = document.getElementById('Go');
-       var Input = document.getElementById('Input');
-       var Output = document.getElementById('Output');
-	   
-Go.addEventListener('click', function() {
-	Output.value = Input.value;
-}, false);
-Input.addEventListener('input', function() {
-	Output.value = " "+Input.value.replace(/ a/g, " A").replace(/ e/g, " E").replace(/ i/g, " I").replace(/ o/g, " O").replace(/ u/g, " U").replace(/aa/g, "aA").replace(/ae/g, "aE").replace(/ai/g, "aI").replace(/ao/g, "aO").replace(/au/g, "aU").replace(/ea/g, "eA").replace(/ee/g, "eE").replace(/ei/g, "eI").replace(/eo/g, "eO").replace(/eu/g, "eU").replace(/ia/g, "iA").replace(/ie/g, "iE").replace(/ii/g, "iI").replace(/io/g, "iO").replace(/iu/g, "iU").replace(/oa/g, "oA").replace(/oe/g, "oE").replace(/oi/g, "oI").replace(/oo/g, "eO").replace(/ou/g, "oU").replace(/ua/g, "uA").replace(/ue/g, "uE").replace(/ui/g, "uI").replace(/uo/g, "uO").replace(/uu/g, "uU").replace(/ck/g, "c").replace(/Aa/g, "AA").replace(/Ae/g, "AE").replace(/Ai/g, "AI").replace(/Ao/g, "AO").replace(/Au/g, "AU").replace(/Ea/g, "EA").replace(/Ee/g, "EE").replace(/Ei/g, "EI").replace(/Eo/g, "EO").replace(/Eu/g, "EU").replace(/Ia/g, "IA").replace(/Ie/g, "IE").replace(/Ii/g, "II").replace(/Io/g, "IO").replace(/Iu/g, "IU").replace(/Oa/g, "OA").replace(/Oe/g, "OE").replace(/Oi/g, "OI").replace(/Oo/g, "OO").replace(/Ou/g, "OU").replace(/Ua/g, "UA").replace(/Ue/g, "UE").replace(/Ui/g, "UI").replace(/Uo/g, "UO").replace(/Uu/g, "UU");
-}, false);
-//  End -->
-     </script>
-	<p>Unlike Latin characters,  the Feanorian letters always make the same sound. For example, there is a Tengwa for the ‘SH’ sound. Since it would be impossible for this transcriber to determine which sound a letter makes (short of having a complete Tengwar/English dictionary), it uses the most common sound of each letter. If you are using Google Chrome, the transcriber does in fact transcribe ch, sh, ng, etc. to their proper tengwa. If you are using another browser, the transcriber will use the separate tengwa for c and h, etc. To make the transcribing most accurate, spell everything phonetically. Use a capital ‘S’ when s sounds as it does in ‘Charges.’</p>
-	<h1><a id="Browser_Compatability_2"></a>Browser Compatability</h1>
-	<p>Tengwar Transcriber works best in Google Chrome. It also works well in Safari, Edge, Internet Explorer, and Firefox, although all features may not be supported. If you use Opera or another browser that is not listed, please let me know how it works on the Feedback page.</p>
-	<h1><a id="About_Elvish_6"></a>About Elvish</h1>
-	<p>The lettering system commonly known as ‘elvish’ is the Feanorian letters (hence this site’s name) and was brought to Middle-earth by the exiled Noldor. The consonantal signs are called Tengwar (singular Tengwa) and the vowel sounds are represented by tehtar (singular tehta), which are placed over the previous consonant or a carrier, which looks like an ‘i’ without a dot.<br>
-	The Feanorian letters were designed to be adapted to represent different languages, so there were different methods, or modes, for writing in Quenya, Sindarin, Westron, Black Speech, etc. There is no mode for representing English; the one designed for use here is substantially similar to that used by other transcribers, particularly the one listed in the credits. Full article <a href="/abouttengwar.html">here</a>; more complete information can be found in appendix E of The Lord of the Rings. <a href="https://en.wikipedia.org/wiki/Tengwar">Wikipedia</a> and <a href="http://lotr.wikia.com/wiki/Tengwar">Lord of the Rings Wikia</a> also have good articles.</p>
-	<h1><a id="Disclaimer_10"></a>Disclaimer</h1>
-	<p>This site is not endorsed, sponsored by, or associated with the Tolkien Estate.</p>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
 
