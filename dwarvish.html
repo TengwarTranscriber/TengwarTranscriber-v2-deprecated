@@ -20,15 +20,20 @@
 		  }
 	
 		  @font-face {
-			  font-family: 'Tengwar Feanor RegularTTF';
-			  src: url('tengwarfeanorregular.ttf') format('truetype');
-		  } 
+			font-family: 'dwarvishSVG';
+			src: url('dwarvishregular.svg#Tolkien Dwarvish Runes Regular') format('svg');
+		  }
+	
+		  @font-face {
+			font-family: 'dwarvishTTF';
+			src: url('dwarvishregular.ttf') format('truetype');
+		 	} 
 		  div {
-			  font-family: 'Tengwar Feanor RegularEOT', 'Tengwar Feanor RegularTTF', 'Tengwar Feanor RegularSVG';
+			  font-family: 'dwarvishTTF', 'dwarvishSVG';
 			  margin: 30px 0 30px 0;
 		  }
 		  textarea#output {
-			  font-family: 'Tengwar Feanor RegularEOT', 'Tengwar Feanor RegularTTF', 'Tengwar Feanor RegularSVG';
+			  font-family: 'dwarvishTTF', 'dwarvishSVG';
   			font-size: 20pt;
 		  } 
 	</style>
@@ -66,7 +71,7 @@
   <div style="margin:15px 0 15px 0;">
   
  
-  <textarea style="margin: 0px; height: 162px; width: 100%; font-family:Tengwar Feanor RegularTTF;" id="Output" class="h1" readonly="">Text Entered here will be tranScribed</textarea></div>
+  <textarea style="margin: 0px; height: 162px; width: 100%; font-family:dwarvishTTF;" id="Output" class="h1" readonly="">Text Entered here will be tranScribed</textarea></div>
 </div>
 
 
