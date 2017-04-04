@@ -281,6 +281,24 @@ window.onclick = function(event) {
         modalElvish.style.display = "none";
     }
 }
+
+//get url parameters
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+//when the window loads
+window.onload = function() {
+  if(getUrlParameter("font") == "dwarvish"){
+  	modalDwarvish.style.display = "block";
+  }
+	if(getUrlParameter("font") == "elvish"){
+		modalElvish.style.display = "block";
+	}	
+}
 </script>
 	    <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
