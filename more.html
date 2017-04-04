@@ -131,7 +131,7 @@ width:253px;
     </section>
 
     <section class="main-content">
-	    <button id="myBtn">Open Modal</button>
+	    
 	    <!--
         <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/tengwarfeanorregular.ttf" class="linkbutton" style="margin:10px 0px 0px 0px">Tengwar Font Download</a>
         <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/dwarvishregular.ttf" class="linkbutton" style="margin:10px 0px 0px 0px">Dwarvish Font Download</a>
@@ -161,35 +161,34 @@ width:253px;
 <li>Click the Install button to install the font for your user account</li>
 </ol>!-->
 	    <!-- The Modal -->
-<div id="myModal" class="modal">
+<!-- Trigger/Open The Modal -->
+<button id="ElvishButton">Open Elvish Modal</button>
+<button id="DwarvishButton">Open Dwarvish Modal</button>
 
+<!-- The Modal -->
+<div id="DwarvishModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>How to install TTF Files</h2>
+      <span class="close" id="DwarvishClose">&times;</span>
+      <h2>Dwarvish</h2>
     </div>
     <div class="modal-body" style="overflow:scroll;height:200px;">
-      <h1><a id="To_install_a_TTF_font_on_Windows_0"></a>Windows:</h1>
-<ol>
-<li>Download it</li>
-<li>Right-click the downloaded font file</li>
-<li>Select “Install”</li>
-</ol>
-<h1><a id="To_install_a_TTF_font_on_Mac_5"></a>Mac:</h1>
-<ol>
-<li>Download it</li>
-<li>Double-click the downloaded font file to preview it</li>
-<li>Click Install Font in the preview window to install it</li>
-</ol>
-<h1><a id="To_install_a_TTF_font_on_Linux_10"></a>Linux:</h1>
-<p>Different Linux distributions come with different desktop environments, and those different desktop environments contain different applications for this.</p>
-<ol>
-<li>Download it</li>
-<li>Double-click the font to preview it</li>
-<li>On Ubuntu or other GNOME-based distributions, GNOME Font Viewer will open</li>
-<li>Click the Install button to install the font for your user account</li>
-</ol>
+    <p>content</p>
+    </div>
+   </div>
+  </div>
+  
+<!-- The Modal -->
+<div id="ElvishModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close"  id="ElvishClose">&times;</span>
+      <h2>Elvish</h2>
+    </div>
+    <div class="modal-body" style="overflow:scroll;height:200px;">
+      <p>content</p>
     </div>
   </div>
 
@@ -197,28 +196,47 @@ width:253px;
 
 <script>
 // Get the modal
-var modal = document.getElementById('myModal');
+var modalElvish = document.getElementById('ElvishModal');
+// Get the modal
+var modalDwarvish = document.getElementById('DwarvishModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btnDwarvish = document.getElementById("DwarvishButton");
+// Get the button that opens the modal
+var btnElvish = document.getElementById("ElvishButton");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var spanElvish = document.getElementById("ElvishClose");
+// Get the <span> element that closes the modal
+var spanDwarvish = document.getElementById("DwarvishClose");
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
+btnDwarvish.onclick = function() {
+    modalDwarvish.style.display = "block";
+}
+// When the user clicks the button, open the modal 
+btnElvish.onclick = function() {
+    modalElvish.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
+spanElvish.onclick = function() {
+    modalElvish.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+spanDwarvish.onclick = function() {
+    modalDwarvish.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == modalElvish) {
+        modalElvish.style.display = "none";
+        modalDwarvish.style.display = "none";
+    }if (event.target == modalDwarvish) {
+    	modalDwarvish.style.display = "none";
+        modalElvish.style.display = "none";
     }
 }
 </script>
