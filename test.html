@@ -30,7 +30,7 @@
 <h2>Alert Messages</h2>
 
 <p>Click on the "x" symbol to close the alert message.</p>
-<div class="alert" id="alert" style="visibility:hidden">
+<div class="alert" id="alert" style="display:none">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
   <strong>Thanks for your feedback!</strong> We'll get back to you in ~24 hours.
 </div>
@@ -46,7 +46,7 @@ function getUrlParameter(name) {
 
 window.onload = function() {
   if(getUrlParameter(alert) == "1"){
-  	alert.style.visibility='visible'
+  	alert.style.display='block';
   }
 }
 </script>
