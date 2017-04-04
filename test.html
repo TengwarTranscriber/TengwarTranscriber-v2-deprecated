@@ -30,7 +30,7 @@
 <button type="button" onclick='html2canvas(document.getElementById("alert"), {
   onrendered: function(canvas) {
     window.open(canvas.toDataURL("image/png"), "_blank");
-                                                       }'>Click to screenshot</button>
+                                                       }});'>Click to screenshot</button>
 <h2>Alert Messages</h2>
 
 <p>Click on the "x" symbol to close the alert message.</p>
@@ -52,6 +52,5 @@ window.onload = function() {
   if(getUrlParameter("alert") == 1){
   	alert.style.display='block';
   }
-});
 }
 </script>
