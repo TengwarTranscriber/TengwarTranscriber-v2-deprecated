@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript" src="html2canvas.js"></script>
 <style>
 .alert {
     padding: 20px;
@@ -48,5 +49,10 @@ window.onload = function() {
   if(getUrlParameter("alert") == 1){
   	alert.style.display='block';
   }
+  html2canvas(document.getElementById("alert"), {
+  onrendered: function(canvas) {
+    document.body.appendChild(canvas);
+  }
+});
 }
 </script>
