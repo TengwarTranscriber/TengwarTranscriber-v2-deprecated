@@ -29,7 +29,10 @@
 <body>
 
 <h2>Alert Messages</h2>
-
+<button type="button" onclick='html2canvas(document.getElementById("alert"), {
+  onrendered: function(canvas) {
+    window.open(canvas.toDataURL("image/png"), "_blank");
+                                                       }'>Click to screenshot</button>
 <p>Click on the "x" symbol to close the alert message.</p>
 <div class="alert" id="alert" style="display:none">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
@@ -48,10 +51,6 @@ function getUrlParameter(name) {
 window.onload = function() {
   if(getUrlParameter("alert") == 1){
   	alert.style.display='block';
-  }
-  html2canvas(document.getElementById("alert"), {
-  onrendered: function(canvas) {
-    window.open(canvas.toDataURL("image/png"), '_blank');
   }
 });
 }
