@@ -96,6 +96,21 @@ Input.addEventListener('input', function() {
 }, false);
 //  End -->
      </script>
+	    <script>
+		var Input = document.getElementById('Input');
+		    
+		function getUrlParameter(name) {
+    			name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    			var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    			var results = regex.exec(location.search);
+    			return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+		}
+		window.onload = function() {
+  			if( getUrlParameter("text") ){
+				Input.value = getUrlParameter("text")
+  			}
+		}
+	    </script>
 	<p>Unlike Latin characters,  the Feanorian letters always make the same sound. For example, there is a Tengwa for the ‘SH’ sound. Since it would be impossible for this transcriber to determine which sound a letter makes (short of having a complete Tengwar/English dictionary), it uses the most common sound of each letter. If you are using Google Chrome, the transcriber does in fact transcribe ch, sh, ng, etc. to their proper tengwa. If you are using another browser, the transcriber will use the separate tengwa for c and h, etc. To make the transcribing most accurate, spell everything phonetically. Use a capital ‘S’ when s sounds as it does in ‘Charges.’</p>
 	<h1><a id="Browser_Compatability_2"></a>Browser Compatability</h1>
 	<p>Tengwar Transcriber works best in Google Chrome. It also works well in Safari, Edge, Internet Explorer, and Firefox, although all features may not be supported. If you use Opera or another browser that is not listed, please let me know how it works on the Feedback page.</p>
