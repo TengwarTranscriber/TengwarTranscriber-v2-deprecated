@@ -85,11 +85,11 @@
 	    
 
 <div id="Inputs" style="margin:15px;">
-	<default style="margin:0 15px 0 0; font-family:Times New Roman;">Type in the text field below to transcribe</default>
-	<textarea style="margin: 0px; height: 175px; width: 100%; font-family: Times New Roman;" id="Input">Text entered here will be transcribed</textarea>
+	<default style="margin:0 15px 0 0; font-family:Segoe UI;">Type in the text field below to transcribe</default>
+	<textarea style="margin: 0px; height: 175px; width: 100%; font-family: Segoe UI;" id="Input">Text entered here will be transcribed</textarea>
 </div>
 <div id="Results" style="margin:15px;">
-  <default style="margin:0 15px 0 0; font-family:Times New Roman;">Transcribed text will appear below</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
+  <default style="margin:0 15px 0 0; font-family:Segoe UI;">Transcribed text will appear below</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
 	<div style="margin:15px 0 15px 0;">
 	<div class="alert" id="alert" style="display:none;font-family:Times New Roman;">
   	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
@@ -97,7 +97,7 @@
 	</div>
   <textarea style="margin: 0px; height: 162px; width: 100%; font-family:dwarvishTTF;" id="Output" class="h1" readonly="">Text Entered here will be tranScribed</textarea></div>
 </div>
-	    <div><a href="#" onclick='html2canvas(document.getElementById("Output"), {
+	    <div><a href="#" style="font-family:Segoe UI;" onclick='html2canvas(document.getElementById("Output"), {
   onrendered: function(canvas) {
     window.open(canvas.toDataURL("image/png"), "_blank");
                                                        }});'>Click here to save transcription as image</a></div>
