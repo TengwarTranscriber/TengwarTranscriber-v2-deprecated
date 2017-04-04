@@ -37,6 +37,27 @@
   			font-size: 20pt;
 		  } 
 	</style>
+	<style>
+.alert {
+    padding: 20px;
+    background-color: #2196F3;
+    color: white;
+    width: 100%
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
+</style>
     <script language="JavaScript">
      <!-- Begin
        function Go(input)
@@ -69,9 +90,11 @@
 </div>
 <div id="Results" style="margin:15px;">
   <default style="margin:0 15px 0 0; font-family:Times New Roman;">Transcribed text will appear below</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
-  <div style="margin:15px 0 15px 0;">
-  
- 
+	<div style="margin:15px 0 15px 0;">
+	<div class="alert" id="alert" style="display:none;font-family:Times New Roman;">
+  	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  	<strong id="alerttext" style="font-family:Segoe UI;">Here's you transription:</strong>
+	</div>
   <textarea style="margin: 0px; height: 162px; width: 100%; font-family:dwarvishTTF;" id="Output" class="h1" readonly="">Text Entered here will be tranScribed</textarea></div>
 </div>
 	<h1><a id="About_Dwarvish_Runes_0"></a>About Dwarvish Runes</h1>
@@ -85,18 +108,22 @@ The runes of the dwarves were adopted by Tolkien from the Anglo-Saxon and Scandi
        var Go = document.getElementById('Go');
        var Input = document.getElementById('Input');
        var Output = document.getElementById('Output');
+			var alert = document.getElementById("alert");
 	   
 Go.addEventListener('click', function() {
 	Output.value = Input.value;
 }, false);
 Input.addEventListener('input', function() {
 	Output.value = Input.value;
+	alert.style.display='none';
 }, false);
 //  End -->
      </script>
 			<script>
 			var Input = document.getElementById('Input');
 			var Output = document.getElementById('Output');
+			var alert = document.getElementById("alert");
+			var alerttext = document.getElementById("alerttext");
 		    
 			function getUrlParameter(name) {
     			name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -108,7 +135,9 @@ Input.addEventListener('input', function() {
   			if( getUrlParameter("text") ){
 					Input.value = getUrlParameter("text")
 					Output.value = Input.value;
-					Output.scrollIntoView();
+					alert.style.display='block';
+					alerttext.innerHTML = '"'+getUrlParameter("text")+'"'+" transcribes to:"
+					alert.scrollIntoView();
   			}
 			}
 	    </script>
