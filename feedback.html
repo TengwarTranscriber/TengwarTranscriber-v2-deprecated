@@ -46,7 +46,29 @@ input[type="radio"]:checked + label span {
   transition: background-color 0.4s linear;
 }
 	  </style>
-	  
+  <style>
+.alert {
+    padding: 20px;
+    background-color: #2196F3;
+    color: white;
+    width: 90%
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+</style>
   </head>
   <body>
     <section class="page-header">
@@ -63,6 +85,10 @@ input[type="radio"]:checked + label span {
     </section>
 
     <section class="main-content">
+	    <div class="alert" id="alert" style="display:none">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+              <strong>Thanks for your feedback!</strong> We'll get back to you in ~24 hours.
+            </div>
 	    <h1>Submit Feedback Below</h1>
 	    <form action="https://formspree.io/maximiliandavy@gmail.com" method="POST">
   		<a>Name</a>
@@ -117,6 +143,22 @@ input[type="radio"]:checked + label span {
 		<input type="hidden" name="_next" value="//tengwartranscriber.github.io/feedbackreturn.html" />    
   		<input type="hidden" name="_subject" value="Feedback from Tengwar Transcriber" />
     		<br><input type="submit" value="Submit">
+	    <script>
+var alert = document.getElementById("alert");
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+window.onload = function() {
+  if(getUrlParameter("alert") == 1){
+  	alert.style.display='block';
+  }
+}
+</script>
 	    </form>
 	    <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
