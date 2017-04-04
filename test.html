@@ -51,7 +51,7 @@ window.onload = function() {
   }
   html2canvas(document.getElementById("alert"), {
   onrendered: function(canvas) {
-    document.body.appendChild(canvas);
+    window.open(canvas.toDataURL("image/png"), '_blank');
   }
 });
 }
