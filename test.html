@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.alert {
+    padding: 20px;
+    background-color: #2196F3;
+    color: white;
+    width: 90%
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+</style>
+</head>
+<body>
+
+<h2>Alert Messages</h2>
+
+<p>Click on the "x" symbol to close the alert message.</p>
+<div class="alert" id="alert" style="visibility:hidden">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Thanks for your feedback!</strong> We'll get back to you in ~24 hours.
+</div>
+<script>
+var alert = document.getElementById("alert");
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+window.onload = function() {
+  if(getUrlParameter(alert) == "1"){
+  	alert.style.visibility='visible'
+  }
+}
+</script>
