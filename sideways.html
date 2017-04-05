@@ -42,7 +42,8 @@ width:253px;
 	      $("#less_button").toggle();
       });
 	    $("#rotateOther").click(function(){
-        $("#body").attr("style", "-webkit-transform: rotate("+$("#degrees").attr("value")+"deg);-moz-transform: rotate("+$("#degrees").attr("value")+"deg);-o-transform: rotate("+$("#degrees").attr("value")+"deg);");
+        var degrees = document.getElementById('degrees').value
+        document.body.setAttribute("style", "-webkit-transform: rotate("+ degrees +"deg);-moz-transform: rotate("+ degrees +"deg);-o-transform: rotate("+ degrees +"deg);");
       });
     });
     </script>
