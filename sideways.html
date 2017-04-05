@@ -39,12 +39,15 @@ width:253px;
       $("#less_button").click(function(){
         $("#more_button").toggle();
         $("#more_menu").slideToggle("slow");
-	$("#less_button").toggle();
+	      $("#less_button").toggle();
+      });
+	    $("#rotateOther").click(function(){
+        $("#body").attr("style", "-webkit-transform: rotate("+$("#degrees").attr("value")+"deg);-moz-transform: rotate("+$("#degrees").attr("value")+"deg);-o-transform: rotate("+$("#degrees").attr("value")+"deg);");
       });
     });
     </script>
   </head>
-  <body>
+  <body id="body" style="-webkit-transform: rotate(-10deg);-moz-transform: rotate(-10deg);-o-transform: rotate(-10deg);">
     <section class="page-header">
       <h1 class="project-name">TFET - Rotate Webpage</h1>
       <a href="https://tengwartranscriber.github.io/" class="btn">Home</a>
@@ -72,6 +75,7 @@ width:253px;
 	    <button style="margin:10px 0px 0px 0px" onclick='document.body.setAttribute("style", "-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-o-transform: rotate(180deg);");'>Upside Down</button>
 	    <button style="margin:10px 0px 0px 0px" onclick='document.body.setAttribute("style", "-webkit-transform: rotate(10deg);-moz-transform: rotate(10deg);-o-transform: rotate(10deg);");'>10 Degrees Right</button>
 	    <button style="margin:10px 0px 0px 0px" onclick='document.body.setAttribute("style", "-webkit-transform: rotate(-10deg);-moz-transform: rotate(-10deg);-o-transform: rotate(-10deg);");'>10 Degrees Left</button>
+			<button style="margin:10px 0px 0px 0px" id="rotateOther">Other:</button><input type="number" id="degrees" min="-360" max="360">
 	    <h1>As you can see, this page is rotated</h1><br>
 		<p>It’s actually fairly easy to do. Just replace<br>
 		<code>&lt;body&gt;</code><br>
