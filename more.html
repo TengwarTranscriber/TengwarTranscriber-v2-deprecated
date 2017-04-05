@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Tengwar Feanor Elvish Transcriber | More</title>
+    <title>Tengwar Feanor Elvish Transcriber | Font Downloads</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -109,23 +109,40 @@ width:253px;
     to {opacity: 1}
 }
 </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script> 
+    $(document).ready(function(){
+      $("#more_button").click(function(){
+        $("#more_button").toggle();
+        $("#more_menu").slideToggle("slow");
+        $("#less_button").toggle();
+      });
+      $("#less_button").click(function(){
+        $("#more_button").toggle();
+        $("#more_menu").slideToggle("slow");
+	$("#less_button").toggle();
+      });
+    });
+    </script>
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">TFET - More</h1>
+      <h1 class="project-name">TFET - Font Downloads</h1>
       <a href="https://tengwartranscriber.github.io/" class="btn">Home</a>
       <a href="https://tengwartranscriber.github.io/dwarvish.html" class="btn">Dwarvish Transcriber</a>
       <a href="https://tengwartranscriber.github.io/abouttengwar.html" class="btn">About Tengwar</a>
       <a href="https://tengwartranscriber.github.io/aboutdwarvish.html" class="btn">About Dwarvish Runes</a>
       <a href="https://tengwartranscriber.github.io/welshpronunciation.html" class="btn">Welsh Pronunciation</a>
-			<a href="/runner.html" class="btn">T-Rex Game</a>
-			<a href="/sideways.html" class="btn">Rotate Webpage</a>
-			<a href="/feedback.html" class="btn">Feedback</a>
-      <a id="ElvishButton" class="btn" style="cursor:pointer;">Tengwar Font Download</a>
-      <a id="DwarvishButton" class="btn" style="cursor:pointer;">Dwarvish Font Download</a>
-			<a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/" class="btn">View Source</a>
-			<a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/zipball/master" class="btn">Download Source</a>
-      
+      <a style="cursor:pointer;" class="btn" id="more_button">More...</a>
+      <a style="cursor:pointer;display:none;" class="btn" id="less_button">Less...</a>
+      <div id= "more_menu" style="display:none;">
+      <a href="/runner.html" class="btn">T-Rex Game</a>
+      <a href="/sideways.html" class="btn">Rotate Webpage</a>
+      <a href="/feedback.html" class="btn">Feedback</a>
+      <a href="https://tengwartranscriber.github.io/more.html?font=elvish" id="ElvishButton" class="btn" >Tengwar Font Download</a>
+      <a href="https://tengwartranscriber.github.io/more.html?font=dwarvish" id="DwarvishButton" class="btn">Dwarvish Font Download</a>
+      <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/" class="btn">View Source</a>
+      <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/zipball/master" class="btn">Download Source</a></div>
       <!--<a href="https://github.com/jasonlong/geo_pattern/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/jasonlong/geo_pattern/tarball/master" class="btn">Download .tar.gz</a>!-->
     </section>
