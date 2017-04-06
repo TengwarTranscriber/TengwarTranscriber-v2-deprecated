@@ -10,8 +10,13 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <!--#include file="header.html" -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script> 
+    $(function(){
+      $("#HEADER").load("header.html"); 
+    });
+    </script> 
+		<div id="HEADER"></div>
     <section class="main-content">
 	    <h1>The header should be right above this.</h1>  
       <footer class="site-footer">
