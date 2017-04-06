@@ -2532,32 +2532,17 @@ html[subframe] body {
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script> 
-    $(document).ready(function(){
-      $("#more_button").click(function(){
-        $("#more_button").toggle();
-        $("#more_menu").slideToggle("slow");
-        $("#less_button").toggle();
-      });
-      $("#less_button").click(function(){
-        $("#more_button").toggle();
-        $("#more_menu").slideToggle("slow");
-	$("#less_button").toggle();
-      });
-    });
-    </script>
   </head>
   <body>
+		<noscript>
     <section class="page-header">
-      <h1 class="project-name">TFET - Chrome T-Rex Game</h1>
+      <h1 class="project-name">TFET - About Dwarvish</h1>
       <a href="https://tengwartranscriber.github.io/" class="btn">Home</a>
       <a href="https://tengwartranscriber.github.io/dwarvish.html" class="btn">Dwarvish Transcriber</a>
       <a href="https://tengwartranscriber.github.io/abouttengwar.html" class="btn">About Tengwar</a>
       <a href="https://tengwartranscriber.github.io/aboutdwarvish.html" class="btn">About Dwarvish Runes</a>
       <a href="https://tengwartranscriber.github.io/welshpronunciation.html" class="btn">Welsh Pronunciation</a>
-      <a style="cursor:pointer;" class="btn" id="more_button">More...</a>
-      <a style="cursor:pointer;display:none;" class="btn" id="less_button">Less...</a>
-      <div id= "more_menu" style="display:none;">
+      <div id= "more_menu">
       <a href="/runner.html" class="btn">T-Rex Game</a>
       <a href="/sideways.html" class="btn">Rotate Webpage</a>
       <a href="/feedback.html" class="btn">Feedback</a>
@@ -2568,6 +2553,13 @@ html[subframe] body {
       <!--<a href="https://github.com/jasonlong/geo_pattern/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/jasonlong/geo_pattern/tarball/master" class="btn">Download .tar.gz</a>!-->
     </section>
+		</noscript>
+		<script> 
+    $(function(){
+      $("#HEADER").load("header.html"); 
+    });
+    </script> 
+		<div id="HEADER"></div>
 
     <section class="main-content">
 	    <h1 style="color:#000000;">This is the Running Dinosaur game from Google Chrome</h1>
