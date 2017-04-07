@@ -29,6 +29,12 @@ width:253px;
 	top:1px;
 }</style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	  <script>
+		$("#rotateOther").click(function(){
+			var degrees = $("#degrees").val()
+    			$("#body").attr("style", "-webkit-transform: rotate("+degrees+");-moz-transform: rotate("+degrees+"deg);-o-transform: rotate("+degrees+"deg);");
+		});
+	  </script>
   </head>
   <body id="body" style="-webkit-transform: rotate(-10deg);-moz-transform: rotate(-10deg);-o-transform: rotate(-10deg);">
     <script> 
