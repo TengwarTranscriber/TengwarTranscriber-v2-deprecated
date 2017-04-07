@@ -121,6 +121,16 @@ width:253px;
         var results = regex.exec(location.search);
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
       }
+      $(function(){
+        if(getUrlParameter("font")=="dwarvish"){
+          $("#dwarvishinstructions").show();
+        }else if(getUrlParameter("font")=="elvish"){
+          $("#elvishinstructions").show();
+        }else{
+          $("#elvishinstructions").show();
+	  $("#dwarvishinstructions").show();
+        }	
+      });
     </script> 
     <section class="page-header">
       <h1 class="project-name">TFET - Font Downloads</h1>
@@ -139,37 +149,82 @@ width:253px;
           <h1>Sorry</h1>
           <h2>Your browser does not have Javascript enabled. Many of the functions on this website (highlighted in red) require Javascript to function. Please enable Javascript for full functionality</h2>
         </div>
-	    </noscript>
-      </section>
+      </noscript>
+    </section>
 
     <section class="main-content">
-	<a href="/tengwarfeanorregular.ttf" id="ElvishButton">Tengwar Font Download</a><br>
-      	<a href="/dwarvishregular.ttf" id="DwarvishButton">Dwarvish Font Download</a>
-<h1>To install a TTF Font:</h1>	   
-<h1><a id="To_install_a_TTF_font_on_Windows_0"></a>Windows:</h1>
-<ol>
-<li>Download it</li>
-<li>Right-click the downloaded font file</li>
-<li>Select “Install”</li>
-</ol>
-<h1><a id="To_install_a_TTF_font_on_Mac_5"></a>Mac:</h1>
-<ol>
-<li>Download it</li>
-<li>Double-click the downloaded font file to preview it</li>
-<li>Click Install Font in the preview window to install it</li>
-</ol>
-<h1><a id="To_install_a_TTF_font_on_Linux_10"></a>Linux:</h1>
-<p>Different Linux distributions come with different desktop environments, and those different desktop environments contain different applications for this.</p>
-<ol>
-<li>Download it</li>
-<li>Double-click the font to preview it</li>
-<li>On Ubuntu or other GNOME-based distributions, GNOME Font Viewer will open</li>
-<li>Click the Install button to install the font for your user account</li>
-</ol>
-
-		
-
-	    <footer class="site-footer">
+      <div id="dwarvishinstructions" style="display:none">
+        <h1>To install the Dwarvish TTF Font:</h1>	   
+        <h1><a id="To_install_a_TTF_font_on_Windows_0"></a>Windows:</h1>
+        <ol>
+          <li><a href="/dwarvishregular.ttf" id="DwarvishButton">Download it</a></li>
+          <li>Right-click the downloaded font file</li>
+          <li>Select “Install”</li>
+        </ol>
+        <h1><a id="To_install_a_TTF_font_on_Mac_5"></a>Mac:</h1>
+        <ol>
+          <li><a href="/dwarvishregular.ttf" id="DwarvishButton">Download it</a></li>
+          <li>Double-click the downloaded font file to preview it</li>
+          <li>Click Install Font in the preview window to install it</li>
+        </ol>
+        <h1><a id="To_install_a_TTF_font_on_Linux_10"></a>Linux:</h1>
+        <p>Different Linux distributions come with different desktop environments, and those different desktop environments contain different applications for this.</p>
+        <ol>
+          <li><a href="/dwarvishregular.ttf" id="DwarvishButton">Download it</a></li>
+          <li>Double-click the font to preview it</li>
+          <li>On Ubuntu or other GNOME-based distributions, GNOME Font Viewer will open</li>
+          <li>Click the Install button to install the font for your user account</li>
+        </ol>
+      </div><!--dwarvishinstructions!-->
+      <div id="elvishinstructions" style="display:none">
+        <h1>To install the Elvish TTF Font:</h1>	   
+        <h1><a id="To_install_a_TTF_font_on_Windows_0"></a>Windows:</h1>
+        <ol>
+          <li><a href="/tengwarfeanorregular.ttf" id="DwarvishButton">Download it</a></li>
+          <li>Right-click the downloaded font file</li>
+          <li>Select “Install”</li>
+        </ol>
+        <h1><a id="To_install_a_TTF_font_on_Mac_5"></a>Mac:</h1>
+        <ol>
+          <li><a href="/tengwarfeanorregular.ttf" id="DwarvishButton">Download it</a></li>
+          <li>Double-click the downloaded font file to preview it</li>
+          <li>Click Install Font in the preview window to install it</li>
+        </ol>
+        <h1><a id="To_install_a_TTF_font_on_Linux_10"></a>Linux:</h1>
+        <p>Different Linux distributions come with different desktop environments, and those different desktop environments contain different applications for this.</p>
+        <ol>
+          <li><a href="/tengwarfeanorregular.ttf" id="DwarvishButton">Download it</a></li>
+          <li>Double-click the font to preview it</li>
+          <li>On Ubuntu or other GNOME-based distributions, GNOME Font Viewer will open</li>
+          <li>Click the Install button to install the font for your user account</li>
+        </ol>
+      </div><!--elvishinstructions!-->
+      <noscript>
+        <a href="/tengwarfeanorregular.ttf" id="ElvishButton">Tengwar Font Download</a><br>
+        <a href="/dwarvishregular.ttf" id="DwarvishButton">Dwarvish Font Download</a>
+        <h1>To install a TTF Font:</h1>	   
+        <h1><a id="To_install_a_TTF_font_on_Windows_0"></a>Windows:</h1>
+        <ol>
+          <li>Download it</li>
+          <li>Right-click the downloaded font file</li>
+          <li>Select “Install”</li>
+        </ol>
+        <h1><a id="To_install_a_TTF_font_on_Mac_5"></a>Mac:</h1>
+        <ol>
+          <li>Download it</li>
+          <li>Double-click the downloaded font file to preview it</li>
+          <li>Click Install Font in the preview window to install it</li>
+        </ol>
+        <h1><a id="To_install_a_TTF_font_on_Linux_10"></a>Linux:</h1>
+        <p>Different Linux distributions come with different desktop environments, and those different desktop environments contain different applications for this.</p>
+        <ol>
+          <li>Download it</li>
+          <li>Double-click the font to preview it</li>
+          <li>On Ubuntu or other GNOME-based distributions, GNOME Font Viewer will open</li>
+          <li>Click the Install button to install the font for your user account</li>
+        </ol>
+      </noscript>
+      <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
         <span class="site-footer-credits"><br><a title="free hit counter" href="http://statcounter.com/" target="_blank"><img src="//c.statcounter.com/11301664/0/f67d19ed/0/" alt="free hit counter" style="border:none;"></a> visitors so far</span>
