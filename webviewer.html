@@ -29,19 +29,13 @@
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
-    $('textarea').bind("enterKey",function(e){
+    function goToUrl() {
       $('#webpage').attr('src', $('#url').val())
-    });
-    $('textarea').keyup(function(e){
-      if(e.keyCode == 13)
-      {
-        $(this).trigger("enterKey");
-      }
-    });
+    }
   </script>
   </head>
     <body style="overflow: hidden;height:100%;">
-      <input id="url" type="text" class="url" title="Enter URL" value="https://tengwartranscriber.github.io/index.html"><button class="button" id="button">Go</button>
+      <input id="url" type="text" class="url" title="Enter URL" value="https://tengwartranscriber.github.io/index.html"><button class="button" id="button" onclick="goToURL();">Go</button>
       <iframe id="webpage" class="webpage" src="/index.html"></iframe>
     </body>
 </html>
