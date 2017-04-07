@@ -116,6 +116,13 @@ width:253px;
       $(function(){
         $("#HEADER").load("header.html"); 
       });
+      //get url parameters
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
     </script> 
     <section class="page-header">
       <h1 class="project-name">TFET - Font Downloads</h1>
@@ -134,18 +141,9 @@ width:253px;
       </section>
 
     <section class="main-content">
-	<noscript>
-	<a href="/tengwarfeanorregular.ttf" id="ElvishButton">Tengwar Font Download</a>
+	<a href="/tengwarfeanorregular.ttf" id="ElvishButton">Tengwar Font Download</a><br>
       	<a href="/dwarvishregular.ttf" id="DwarvishButton">Dwarvish Font Download</a>
-	    </noscript>
-	    <!--
-        <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/tengwarfeanorregular.ttf" class="linkbutton" style="margin:10px 0px 0px 0px">Tengwar Font Download</a>
-        <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/dwarvishregular.ttf" class="linkbutton" style="margin:10px 0px 0px 0px">Dwarvish Font Download</a>
-	<a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/" class="linkbutton" style="margin:10px 0px 0px 0px">Github Repository</a>
-	<a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/zipball/master" class="linkbutton" style="margin:10px 0px 0px 0px">Github Zip Download</a>
-	<a href="/feedback.html" class="linkbutton" style="margin:10px 0px 0px 0px">Feedback</a>
-	<a href="/runner.html" class="linkbutton" style="margin:10px 0px 0px 0px">T-Rex Game</a>
-	<a href="/sideways.html" class="linkbutton" style="margin:10px 0px 0px 0px">Crooked Webpage</a>
+<h1>To install a TTF Font:</h1>	   
 <h1><a id="To_install_a_TTF_font_on_Windows_0"></a>Windows:</h1>
 <ol>
 <li>Download it</li>
@@ -165,147 +163,10 @@ width:253px;
 <li>Double-click the font to preview it</li>
 <li>On Ubuntu or other GNOME-based distributions, GNOME Font Viewer will open</li>
 <li>Click the Install button to install the font for your user account</li>
-</ol>!-->
-
-<!-- Trigger/Open The Modal -->
-<!--<button id="ElvishButton">Open Elvish Modal</button>
-<button id="DwarvishButton">Open Dwarvish Modal</button>!-->
-
-<!-- The Modal -->
-<div id="DwarvishModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close" id="DwarvishClose">&times;</span>
-      <h2>Dwarvish Font Installation Instructions</h2>
-    </div>
-    <div class="modal-body" style="overflow:scroll;height:200px;">
-			<!--Content!-->
-    <h1><a id="To_install_a_TTF_font_on_Windows_0"></a>Windows:</h1>
-<ol>
-<li>Download TTF file <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/dwarvishregular.ttf">here</a></li>
-<li>Right-click the downloaded font file</li>
-<li>Select “Install”</li>
 </ol>
-<h1><a id="To_install_a_TTF_font_on_Mac_5"></a>Mac:</h1>
-<ol>
-<li>Download TTF file <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/dwarvishregular.ttf">here</a></li>
-<li>Double-click the downloaded font file to preview it</li>
-<li>Click Install Font in the preview window to install it</li>
-</ol>
-<h1><a id="To_install_a_TTF_font_on_Linux_10"></a>Linux:</h1>
-<p>Different Linux distributions come with different desktop environments, and those different desktop environments contain different applications for this.</p>
-<ol>
-<li>Download TTF file <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/dwarvishregular.ttf">here</a></li>
-<li>Double-click the font to preview it</li>
-<li>On Ubuntu or other GNOME-based distributions, GNOME Font Viewer will open</li>
-<li>Click the Install button to install the font for your user account</li>
-</ol>
-			<!--End content!-->
-    </div>
-   </div>
-  </div>
-  
-<!-- The Modal -->
-<div id="ElvishModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close"  id="ElvishClose">&times;</span>
-      <h2>Elvish Font Installation Instructions</h2>
-    </div>
-    <div class="modal-body" style="overflow:scroll;height:200px;">
-			<!--Content!-->
-      <h1><a id="To_install_a_TTF_font_on_Windows_0"></a>Windows:</h1>
-<ol>
-<li>Download TTF file <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/tengwarfeanorregular.ttf">here</a></li>
-<li>Right-click the downloaded font file</li>
-<li>Select “Install”</li>
-</ol>
-<h1><a id="To_install_a_TTF_font_on_Mac_5"></a>Mac:</h1>
-<ol>
-<li>Download TTF file <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/tengwarfeanorregular.ttf">here</a></li>
-<li>Double-click the downloaded font file to preview it</li>
-<li>Click Install Font in the preview window to install it</li>
-</ol>
-<h1><a id="To_install_a_TTF_font_on_Linux_10"></a>Linux:</h1>
-<p>Different Linux distributions come with different desktop environments, and those different desktop environments contain different applications for this.</p>
-<ol>
-<li>Download TTF file <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/raw/master/tengwarfeanorregular.ttf">here</a></li>
-<li>Double-click the font to preview it</li>
-<li>On Ubuntu or other GNOME-based distributions, GNOME Font Viewer will open</li>
-<li>Click the Install button to install the font for your user account</li>
-</ol>
-			<!--End Content!-->
-    </div>
-  </div>
 
-</div>
+		
 
-<script>
-// Get the modal
-var modalElvish = document.getElementById('ElvishModal');
-// Get the modal
-var modalDwarvish = document.getElementById('DwarvishModal');
-
-// Get the button that opens the modal
-var btnDwarvish = document.getElementById("DwarvishButton");
-// Get the button that opens the modal
-var btnElvish = document.getElementById("ElvishButton");
-
-// Get the <span> element that closes the modal
-var spanElvish = document.getElementById("ElvishClose");
-// Get the <span> element that closes the modal
-var spanDwarvish = document.getElementById("DwarvishClose");
-
-// When the user clicks the button, open the modal 
-btnDwarvish.onclick = function() {
-    modalDwarvish.style.display = "block";
-}
-// When the user clicks the button, open the modal 
-btnElvish.onclick = function() {
-    modalElvish.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanElvish.onclick = function() {
-    modalElvish.style.display = "none";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanDwarvish.onclick = function() {
-    modalDwarvish.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modalElvish) {
-        modalElvish.style.display = "none";
-        modalDwarvish.style.display = "none";
-    }if (event.target == modalDwarvish) {
-    	modalDwarvish.style.display = "none";
-        modalElvish.style.display = "none";
-    }
-}
-
-//get url parameters
-function getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-}
-
-//when the window loads
-window.onload = function() {
-  if(getUrlParameter("font") == "dwarvish"){
-  	modalDwarvish.style.display = "block";
-  }
-	if(getUrlParameter("font") == "elvish"){
-		modalElvish.style.display = "block";
-	}	
-}
-</script>
 	    <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
