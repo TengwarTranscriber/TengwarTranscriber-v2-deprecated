@@ -35,7 +35,7 @@ width:253px;
 			alert("Hello! I am an alert box!!");
 			var degrees = document.getElementById('degrees').value;
     			document.getElementById("body").style="-webkit-transform: rotate("+degrees+");-moz-transform: rotate("+degrees+"deg);-o-transform: rotate("+degrees+"deg);";
-		});
+		};
 	  </script>
   </head>
   <body id="body" style="-webkit-transform: rotate(-10deg);-moz-transform: rotate(-10deg);-o-transform: rotate(-10deg);">
@@ -67,7 +67,7 @@ width:253px;
 			alert("Hello! I am an alert box!!");
 			var degrees = document.getElementById('degrees').value;
     			document.getElementById("body").style="-webkit-transform: rotate("+degrees+");-moz-transform: rotate("+degrees+"deg);-o-transform: rotate("+degrees+"deg);";
-		});
+		};
 	  </script>    
 	<p>Rotate to <input type="number" id="degrees" min="-360" max="360" value="-10"> degrees <button style="margin:10px 0px 0px 0px" id="rotateOther" onclick="rotate();">Go</button></p>
 	    <h1>As you can see, this page is rotated</h1><br>
