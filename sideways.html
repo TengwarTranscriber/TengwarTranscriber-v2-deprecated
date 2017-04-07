@@ -33,7 +33,7 @@ width:253px;
 		function rotate() {
 			alert("Hello! I am an alert box!!");
 			var degrees = document.getElementById('degrees').value
-    			$("#body").attr("style", "-webkit-transform: rotate("+degrees+");-moz-transform: rotate("+degrees+"deg);-o-transform: rotate("+degrees+"deg);");
+    			document.getElementById("body").style="-webkit-transform: rotate("+degrees+");-moz-transform: rotate("+degrees+"deg);-o-transform: rotate("+degrees+"deg);");
 		});
 	  </script>
   </head>
