@@ -40,7 +40,7 @@
         left: 50%;
         top: 0px;
         width:50%;
-        height:100%;
+        height: calc(100%-20px);
 		  } 
       #Input {
         position: absolute;
@@ -48,6 +48,13 @@
         top: 0px;
         width:50%;
         height:100%;
+      }
+      #saveimage {
+        position: absolute;
+        left: 50%;
+        top: calc(100%-20px);
+        width:50%;
+        height:20px;
       }
 	</style>
     <script language="JavaScript">
@@ -62,8 +69,9 @@
   </head>
   <body>
     <div class="jsrequired">
-	      <textarea class="jsrequired" style="margin: 0px; font-family: Times New Roman;" id="Input">Text entered here will be tranScribed</textarea>
-        <textarea class="jsrequired" style="margin: 0px; font-family:Tengwar Feanor RegularTTF;" id="Output" readonly="">Text Entered here will be tranScribed</textarea>
+      <textarea class="jsrequired" style="margin: 0px; font-family: Times New Roman;" id="Input">Text entered here will be tranScribed</textarea>
+      <textarea class="jsrequired" style="margin: 0px; font-family:Tengwar Feanor RegularTTF;" id="Output" readonly="">Text Entered here will be tranScribed</textarea>
+      <a id="saveimage" style="cursor:pointer;" onclick='html2canvas(document.getElementById("Output"), {onrendered: function(canvas) {window.open(canvas.toDataURL("image/png"), "_blank");}});' title="The image will open in a new window. Right click and select 'Save' to save">Click here to view/save transcription as image</a>
     </div><!--jsrequired!-->
     <script language="JavaScript">
     <!-- Begin
