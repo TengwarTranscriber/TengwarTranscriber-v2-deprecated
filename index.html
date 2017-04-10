@@ -45,6 +45,7 @@
 	<style>
 .alert {
     padding: 15px;
+    margin: 0px 0px 10px 0px;
     background-color: #2196F3;
     color: white;
     width: 100%
@@ -94,11 +95,15 @@
 	    </noscript>
     </section>
     <section class="main-content">
-      <div class="alert" id="more" style="font-family:Times New Roman;">
+    <div class="alert" id="more">
   		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <p>Minimal version of this transciber is <a href="/minimal.html">here</a>. Be sure to check out the other pages in the menu above.</p>
+        <p>Check out Middle-Earth Maps <a href="/maps.html">here</a>!</p>
       </div><!--alert!-->
-    <div class="jsrequired">
+      <div class="alert" id="more">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <p>Minimal version <a href="/minimal.html">here</a></p>
+      </div><!--alert!-->
+      <div class="jsrequired">
       <div id="Inputs">
         <default style="margin:0 15px 0 0; font-family:Times New Roman;">Type in the text field below to transcribe</default>
 	      <textarea class="jsrequired" style="margin: 0px; height: 175px; width: 100%; font-family: Times New Roman;" id="Input">Text entered here will be tranScribed</textarea>
