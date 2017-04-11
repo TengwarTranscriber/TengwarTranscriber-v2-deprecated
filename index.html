@@ -117,7 +117,8 @@
         </div><!--alert!-->
         <textarea class="jsrequired" style="margin: 0px; height: 162px; width: 100%; font-family:Tengwar Feanor RegularTTF;" id="Output" readonly="">Text Entered here will be tranScribed</textarea></div>
       </div><!--results!-->
-      <div style="font-family:Segoe UI;"><a style="cursor:pointer;" onclick='html2canvas(document.getElementById("Output"), {onrendered: function(canvas) {window.open(canvas.toDataURL("image/png"), "_blank");}});' title="The image will open in a new window. Right click and select 'Save' to save">Click here to view/save transcription as image</a>. Depending on your browser's settings you may have to enable popups for this site.</div>
+      <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick='html2canvas(document.getElementById("Output"), {onrendered: function(canvas) {window.open(canvas.toDataURL("image/png"), "_blank");}});' title="The image will open in a new window. Right click and select 'Save' to save">Download transcription as image</a>. If your browser blocks popups this might not work.</div>
+      <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick="saveOutputAsText();">Download transcription as rich text</a>. You must install the font file from <a href="/more.html?font=elvish" target="_blank">here</a> for the file to display correctly</div>
     </div><!--jsrequired!-->
     <script language="JavaScript">
     <!-- Begin
@@ -148,6 +149,30 @@
         var results = regex.exec(location.search);
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
       }
+	    
+      function saveOutputAsText() {
+        download("transcription.rtf", convertHtmlToRtf(Output.value))
+      }
+      
+      function convertHtmlToRtf(html) {
+        if (!(typeof html === "string" && html)) {
+          return null;
+        }
+        var richText = html;
+        richText ="{\\rtf1\\ansi\\deff0 {\\fonttbl {\\f0 Tengwar Feanor;}}\n" + richText +"\n}";
+        return richText;
+      }
+      
+      function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+      }
+	    
       window.onload = function() {
         if( getUrlParameter("text") ){
           Input.value = getUrlParameter("text")
