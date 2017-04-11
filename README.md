@@ -121,3 +121,4 @@ function download(filename, text) {//function to download a text file
 ## Site theme is [Cayman](https://github.com/jasonlong/cayman-theme) theme by [Jason Long](https://twitter.com/jasonlong)
 ## Much code instruction obtained from [Stack Overflow](http://stackoverflow.com/) and [w3schools](https://www.w3schools.com/)
 ## Feedback form by [Formspree](https://formspree.io/); you should really check it out
+## Thanks to J.R.R. Tolkien for creating Middle-Earth and sharing it with us through his books, which have given me many hours of enjoyment. There will never be a greater fictional universe.
