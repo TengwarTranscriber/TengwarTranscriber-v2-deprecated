@@ -1,5 +1,4 @@
 # Check out the published website at [https://tengwartranscriber.github.io](https://tengwartranscriber.github.io)
-# [Credits](#credits)
 ## Interesting HTML and Javascript (and some CSS):
 ### The header
 The header is the same on all the pages, so that if the header has to be changed you don't have to go to all 15 files to change it. When the page loads, the content from `header.html` is loaded into the `HEADER` div:
