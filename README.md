@@ -1,4 +1,5 @@
 # Check out the published website at [https://tengwartranscriber.github.io](https://tengwartranscriber.github.io)
+# [Credits](#credits)
 ## Interesting HTML and Javascript (and some CSS):
 ### The header
 The header is the same on all the pages, so that if the header has to be changed you don't have to go to all 15 files to change it. When the page loads, the content from `header.html` is loaded into the `HEADER` div:
@@ -112,3 +113,12 @@ function download(filename, text) {//function to download a text file
   document.body.removeChild(element);//hide the download
 }
 ```
+# Credits
+## Fonts were created with [Birdfont](https://birdfont.org/), an awesome free font editor by Johan Mattsson
+## Glyphs for the Tengwar Feanor font were originally from the [Tengwar Annatar](http://www.dafont.com/tengwar-annatar.font) font by Johan Winge
+## The Tengwar mode used is based on the one in [this great android app](https://play.google.com/store/apps/details?id=com.mithlond.tengwar.android)
+## Transcription image download using the [html2canvas](https://html2canvas.hertzen.com/) javascript library by [Niklas Von Hertzen](http://hertzen.com/)
+## Site hosted on [Github Pages](https://pages.github.com/)
+## Site theme is [Cayman](https://github.com/jasonlong/cayman-theme) theme by [Jason Long](https://twitter.com/jasonlong)
+## Much code instruction obtained from [Stack Overflow](http://stackoverflow.com/) and [w3schools](https://www.w3schools.com/)
+## Feedback form by [Formspree](https://formspree.io/); you should really check it out
