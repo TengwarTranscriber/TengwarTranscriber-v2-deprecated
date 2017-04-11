@@ -95,18 +95,19 @@
         <div id="Inputs">
           <default style="margin:0 15px 0 0; font-family:Segoe UI;">Type in the text field below to transcribe</default>
           <textarea class="jsrequired" style="margin: 0px; height: 175px; width: 100%; font-family: Segoe UI;" id="Input">Text entered here will be transcribed</textarea>
-        </div>
+        </div><!--inputs!-->
         <div id="Results">
           <default style="margin:0 15px 0 0; font-family:Segoe UI;">Transcribed text will appear below</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
           <div style="margin:15px 0 15px 0;">
           <div class="alert" id="alert" style="display:none;font-family:Times New Roman;">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
             <strong id="alerttext" style="font-family:Segoe UI;">Here's you transription:</strong>
-          </div>
+          </div><!--alert!-->
           <textarea class="jsrequired" style="margin: 0px; height: 162px; width: 100%; font-family:dwarvishTTF;" id="Output" class="h1" readonly="">Text Entered here will be tranScribed</textarea></div>
-        </div>
-        <div style="font-family:Segoe UI;"><a style="cursor:pointer;" onclick='html2canvas(document.getElementById("Output"), {onrendered: function(canvas) {window.open(canvas.toDataURL("image/png"), "_blank");}});'>Click here to view/save transcription as image</a>. Depending on your browser's settings you may have to enable popups for this site.</div>
-	    </div>
+        </div><!--results!-->
+        <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick='html2canvas(document.getElementById("Output"), {onrendered: function(canvas) {window.open(canvas.toDataURL("image/png"), "_blank");}});' title="The image will open in a new window. Right click and select 'Save' to save">Download transcription as image</a>. If your browser blocks popups this might not work.</div>
+        <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick="saveOutputAsText();">Download transcription as rich text</a>. You must install the font file from <a href="/more.html?font=dwarvish" target="_blank">here</a> for the file to display correctly</div>
+      </div><!--jsrequired!-->
       <h1><a id="About_Dwarvish_Runes_0"></a>About Dwarvish Runes</h1>
       <p>Dwarf Runes  were a runic script used by the <a href="http://lotr.wikia.com/wiki/Dwarves">Dwarves</a>, and was their main writing system. This Dwarven writing system utilizes runes and glyphs when written. Dwarf Runes were first created by the elven loremaster <a href="http://lotr.wikia.com/wiki/Daeron">Daeron</a> of Doriath and were called <a href="http://lotr.wikia.com/wiki/Cirth">Cirth</a> or Certar Daeron. Daeron was inspired by the <a href="http://lotr.wikia.com/wiki/Tengwar">Tengwar</a> script of <a href="http://lotr.wikia.com/wiki/F%C3%ABanor">Fëanor</a> and wanted to create a new script for his <a href="http://lotr.wikia.com/wiki/Sindar">Sindar kin</a>. The dwarves learned the runes from the elves and adapted them for their own language, <a href="http://lotr.wikia.com/wiki/Khuzdul">Khuzdûl</a>. The letters are thin and angular for they were designed for cutting or scratching on wood, stone, or metal. By the Third Age only the dwarves made regular use of them. The Cirth alphabet originally had nineteen characters which was sufficient for the <a href="http://lotr.wikia.com/wiki/Sindarin">Sindarin</a> language. More were later added by the <a href="http://lotr.wikia.com/wiki/Noldor">Noldor</a> of <a href="http://lotr.wikia.com/wiki/Eregion">Eregion</a> to make it easier to express certain subtle sounds in their language. This full expansion of the script is generally called Angerthas Daeron or Angerthas Eregion. After the destruction of Eregion the elves generally ceased to use Cirth at all. Dwarves made their own variations of the script called Angerthas Moria and Angerthas Erebor.<br>
 Some dwarves knew a secret way of writing runes called <a href="http://lotr.wikia.com/wiki/Moon_letters">Moon letters</a>. These runes were written with a silver pen and could only be seen under the light of the moon. With the more advanced forms of Moon letters it had to be a moon of the same shape and season as the day when the runes were written.<br>
@@ -128,28 +129,52 @@ The runes of the dwarves were adopted by Tolkien from the Anglo-Saxon and Scandi
         }, false);
 //  End -->
       </script>
-			<script>
-			var Input = document.getElementById('Input');
-			var Output = document.getElementById('Output');
-			var alert = document.getElementById("alert");
-			var alerttext = document.getElementById("alerttext");
+      <script>
+        var Input = document.getElementById('Input');
+        var Output = document.getElementById('Output');
+        var alert = document.getElementById("alert");
+        var alerttext = document.getElementById("alerttext");
 		    
-			function getUrlParameter(name) {
-    			name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    			var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    			var results = regex.exec(location.search);
-    			return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-			}
-			window.onload = function() {
-  			if( getUrlParameter("text") ){
-					Input.value = getUrlParameter("text")
-					Output.value = Input.value;
-					alert.style.display='block';
-					alerttext.innerHTML = '"'+getUrlParameter("text")+'"'+" transcribes to:"
-					alert.scrollIntoView();
-  			}
-			}
-	    </script>
+        function getUrlParameter(name) {
+          name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+          var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+          var results = regex.exec(location.search);
+          return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        
+        function saveOutputAsText() {
+          download("transcription.rtf", convertHtmlToRtf(Output.value))
+        }
+      
+        function convertHtmlToRtf(html) {
+          if (!(typeof html === "string" && html)) {
+            return null;
+          }
+          var richText = html;
+          richText ="{\\rtf1\\ansi\\deff0 {\\fonttbl {\\f0 Tengwar Feanor;}}\n" + richText +"\n}";
+          return richText;
+        }
+      
+        function download(filename, text) {
+          var element = document.createElement('a');
+          element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+          element.setAttribute('download', filename);
+          element.style.display = 'none';
+          document.body.appendChild(element);
+          element.click();
+          document.body.removeChild(element);
+        }
+        
+        window.onload = function() {
+          if( getUrlParameter("text") ){
+            Input.value = getUrlParameter("text")
+            Output.value = Input.value;
+            alert.style.display='block';
+            alerttext.innerHTML = '"'+getUrlParameter("text")+'"'+" transcribes to:"
+            alert.scrollIntoView();
+          }
+        }
+      </script>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
