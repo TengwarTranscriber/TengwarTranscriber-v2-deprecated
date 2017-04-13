@@ -112,13 +112,49 @@ function download(filename, text) {//function to download a text file
   document.body.removeChild(element);//hide the download
 }
 ```
-# Credits
-## Fonts were created with [Birdfont](https://birdfont.org/), an awesome free font editor by Johan Mattsson
-## Glyphs for the Tengwar Feanor font were originally from the [Tengwar Annatar](http://www.dafont.com/tengwar-annatar.font) font by Johan Winge
-## The Tengwar mode used is based on the one in [this great android app](https://play.google.com/store/apps/details?id=com.mithlond.tengwar.android)
-## Transcription image download using the [html2canvas](https://html2canvas.hertzen.com/) javascript library by [Niklas Von Hertzen](http://hertzen.com/)
-## Site hosted on [Github Pages](https://pages.github.com/)
-## Site theme is [Cayman](https://github.com/jasonlong/cayman-theme) theme by [Jason Long](https://twitter.com/jasonlong)
-## Much code instruction obtained from [Stack Overflow](http://stackoverflow.com/) and [w3schools](https://www.w3schools.com/)
-## Feedback form by [Formspree](https://formspree.io/)
-## Thanks to J.R.R. Tolkien for creating Middle-Earth and sharing it with us through his books, which have given me many hours of enjoyment. There will never be a greater fictional universe.
+### Collapsed Header
+If you scoll the top of the page, you see a large header with the title and links to the other pages. If you scroll down, however, the header collapses to just the title. The way this works is that there are two headers. The first one (the full one) has the attributes `position:relative;` and `z-position:5`. The second one (the collapsed one) has the attributes `position:fixed;`, `z-index:2;`, `left: 0px;`, and `top: 0px;`. So the full version scrolls with the rest of the page, the collapsed version stays at the top of the page, and when they overlap the full version covers the collapsed version:
+```html
+<!--at the top of all the files!-->
+<section class="page-header">
+  <!--title and buttons!-->
+</section>
+<section class="secondary-header">
+  <!--title only!-->
+</section>
+```
+```css
+/*in stylesheet.css*/
+.page-header {
+  color: #fff;
+  text-align: center;
+  background-color: #515151;
+  background-image: linear-gradient(120deg, #515151, #515151); 
+  position:relative;
+  z-index:5;
+}
+
+.secondary-header {
+  color: #fff;
+  text-align: center;
+  background-color: #515151;
+  background-image: linear-gradient(120deg, #515151, #515151); 
+  padding: 5px;
+  position: fixed;
+  z-index:2;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}
+```
+
+## Credits
+### Fonts were created with [Birdfont](https://birdfont.org/), an awesome free font editor by Johan Mattsson
+### Glyphs for the Tengwar Feanor font were originally from the [Tengwar Annatar](http://www.dafont.com/tengwar-annatar.font) font by Johan Winge
+### The Tengwar mode used is based on the one in [this great android app](https://play.google.com/store/apps/details?id=com.mithlond.tengwar.android)
+### Transcription image download using the [html2canvas](https://html2canvas.hertzen.com/) javascript library by [Niklas Von Hertzen](http://hertzen.com/)
+### Site hosted on [Github Pages](https://pages.github.com/)
+### Site theme is [Cayman](https://github.com/jasonlong/cayman-theme) theme by [Jason Long](https://twitter.com/jasonlong)
+### Much code instruction obtained from [Stack Overflow](http://stackoverflow.com/) and [w3schools](https://www.w3schools.com/)
+### Feedback form by [Formspree](https://formspree.io/)
+### Thanks to J.R.R. Tolkien for creating Middle-Earth and sharing it with us through his books, which have given me many hours of enjoyment. There will never be a greater fictional universe.
