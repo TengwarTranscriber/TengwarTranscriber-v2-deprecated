@@ -147,6 +147,46 @@ If you scoll the top of the page, you see a large header with the title and link
   top: 0px;
 }
 ```
+### Custom radio buttons using CSS only
+The radio button iself is made invisible. The label for the button includes a blank span; in the stylesheet it is set to a 19x19 pixel circle. If it is checked the color is light blue; if not the color is black. Background color transition is set to .4 seconds.
+```html
+<!--for each radio button!-->
+<input type="radio" id="radio01" name="Type" value="Help"/><label for="radio01"><span></span>Help Request</label>
+```
+```css
+/*in stylesheet.css*/
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+input[type="radio"] + label span {
+  background-color: #000000;
+}
+input[type="radio"]:checked + label span {
+  background-color: #49d7ff;
+}
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition: background-color 0.4s linear;
+  -o-transition: background-color 0.4s linear;
+  -moz-transition: background-color 0.4s linear;
+  transition: background-color 0.4s linear;
+}
+```
 
 ## Credits
 ### Fonts were created with [Birdfont](https://birdfont.org/), an awesome free font editor by Johan Mattsson
