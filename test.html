@@ -42,49 +42,29 @@
   			font-size: 20pt;
 		  } 
 	</style>
-	<style>
-		.loader,
-.loader:after {
-  border-radius: 50%;
-  width: 10em;
-  height: 10em;
-}
-.loader {
-  margin: 60px auto;
-  font-size: 10px;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-left: 1.1em solid #ffffff;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: load8 1.1s infinite linear;
-  animation: load8 1.1s infinite linear;
-}
-@-webkit-keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+	  .pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #333333;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+	<style>
     </style>
     <script language="JavaScript">
      <!-- Begin
@@ -120,7 +100,6 @@
       <h1 class="project-name">TFET - Elvish Transcriber</h1>
     </section>
     <section class="main-content" style="z-index:-1">
-	    <div class="loader">Loading...</div>
     <div class="alert" id="more">
   		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         <p>Check out Middle-Earth Maps <a href="/maps.html">here</a>!</p>
