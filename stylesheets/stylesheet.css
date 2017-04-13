@@ -23,7 +23,8 @@ a {
     padding: 20px;
     background-color: #2196F3;
     color: white;
-    width: 90%
+    width: 90%;
+    margin: 0px 0px 10px 0px;
 }
 
 .closebtn {
