@@ -70,6 +70,10 @@ textarea {
     border-radius: 5px;
 }
 
+.alert > a {
+  color: #1766A6;
+}
+
 .closebtn {
     margin-left: 15px;
     color: white;
