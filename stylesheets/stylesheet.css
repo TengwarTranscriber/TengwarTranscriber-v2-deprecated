@@ -1,14 +1,17 @@
 /*for textbox styles*/
-textarea {
+textarea, input[type="text"], input[type="email"] {
   margin: 0px; 
-  height: 162px; 
   width: 100%;
   border-radius: 5px;
+  border-style:solid;
+  border-color:#515151;
+  border-width:2px;
 }
-input[type="text"], input[type="email"] {
-  margin: 0px; 
-  width: 100%;
-  border-radius: 5px;
+textarea:focus, input[type="text"]:focus, input[type="email"]:focus  {
+  border-color:#2196F3;
+}
+textarea {
+  height: 162px; 
 }
 /*for elements that require javascript*/
 .jsrequired { 
