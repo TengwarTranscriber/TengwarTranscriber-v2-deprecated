@@ -1,3 +1,11 @@
+input[typle="text"], button{
+  background-color:#515151;
+  color: white;
+  border-color: #000000;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+}
 /*for textbox styles*/
 textarea, input[type="text"], input[type="email"] {
   margin: 0px; 
