@@ -33,10 +33,6 @@
 		  @font-face {
 			  font-family: 'Tengwar Feanor RegularEOT';
 			  src: url('Tengwar Feanor Regular.eot');
-		  } 
-		  div#results {
-			  font-family: 'Tengwar Feanor RegularEOT', 'Tengwar Feanor RegularTTF', 'Tengwar Feanor RegularSVG';
-			  margin: 30px 0 30px 0;
 		  }
 		  textarea#output {
 			  font-family: 'Tengwar Feanor RegularEOT', 'Tengwar Feanor RegularTTF', 'Tengwar Feanor RegularSVG';
@@ -96,7 +92,7 @@
           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
           <strong id="alerttext" style="font-family:Segoe UI;">Here's you transription:</strong>
         </div><!--alert!-->
-        <textarea class="jsrequired" style="font-family:Tengwar Feanor RegularTTF;" id="Output" readonly="">Text Entered here will be tranScribed</textarea></div>
+        <textarea class="jsrequired" style="font-family:Tengwar Feanor RegularTTF;" id="Output" readonly="">Text Entered here will be tranScribed</textarea>
       </div><!--results!-->
       <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick='html2canvas(document.getElementById("Output"), {onrendered: function(canvas) {window.open(canvas.toDataURL("image/png"), "_blank");}});' title="The image will open in a new window. Right click and select 'Save' to save">Download transcription as image</a>. If your browser blocks popups this might not work.</div>
       <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick="saveOutputAsText();">Download transcription as rich text</a>. You must install the font file from <a href="/more.html?font=elvish" target="_blank">here</a> for the file to display correctly</div>
