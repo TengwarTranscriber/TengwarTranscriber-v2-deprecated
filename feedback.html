@@ -36,83 +36,58 @@
       <h1 class="project-name">TFET - Feedback</h1>
     </section>
     <section class="main-content">
-	    <div class="alert" id="alert" style="display:none">
-              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-              <strong>Thanks for your feedback!</strong> We'll get back to you in ~24 hours.
-            </div>
-	    <h1>Submit Feedback Below</h1>
-	    <form action="https://formspree.io/maximiliandavy@gmail.com" method="POST">
-  		<a>Name</a>
-    	<br><input type="text" name="Name" placeholder="Richard Roe">
-			<br><a>Email*</a>
-    	<br><input type="email" name="email" placeholder="yourname@email.com">
-			
-			<br><a>Feedback Type*</a>
-  		<br><input type="radio" id="radio01" name="Type" value="Suggestion"/><label for="radio01"><span></span>Suggestion </label>
-		<input type="radio" id="radio02" name="Type" value="Help"/><label for="radio02"><span></span>Help Request </label>
-		<input type="radio" id="radio03" name="Type" value="Bug Report"/><label for="radio03"><span></span>Bug Report </label>
-		<input type="radio" id="radio04" name="Type" value="Comment" checked/><label for="radio04"><span></span>Comment </label>
-		<input type="radio" id="radio05" name="Type" value="Other"/><label for="radio05"><span></span>Other </label>
-		    <!--<input type="radio" name="Type" value="Suggestion" checked>Suggestion
-  		<input type="radio" name="Type" value="Help" checked>Help Request 
-  		<input type="radio" name="Type" value="Bug Report" checked>Bug Report 
-  		<input type="radio" name="Type" value="Comment" checked>Comment 
-  		<input type="radio" name="Type" value="Other" checked>Other !--> 
-				
+      <div class="alert" id="alert" style="display:none">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Thanks for your feedback!</strong> We'll get back to you in ~24 hours.
+      </div>
+      <h1>Submit Feedback Below</h1>
+      <form action="https://formspree.io/maximiliandavy@gmail.com" method="POST">
+        <a>Name</a>
+        <br><input type="text" name="Name" placeholder="Richard Roe">
+        <br><a>Email*</a>
+        <br><input type="email" name="email" placeholder="yourname@email.com">
+        <br><a>Feedback Type*</a>
+        <br><input type="radio" id="radio01" name="Type" value="Suggestion"/><label for="radio01"><span></span>Suggestion </label>
+        <input type="radio" id="radio02" name="Type" value="Help"/><label for="radio02"><span></span>Help Request </label>
+        <input type="radio" id="radio03" name="Type" value="Bug Report"/><label for="radio03"><span></span>Bug Report </label>
+        <input type="radio" id="radio04" name="Type" value="Comment" checked/><label for="radio04"><span></span>Comment </label>
+        <input type="radio" id="radio05" name="Type" value="Other"/><label for="radio05"><span></span>Other </label>
     	<br><a>Operating System</a>
-  		<br><input type="radio" id="radio06" name="OS" value="Windows" checked/><label for="radio06"><span></span>Windows </label>
-		<input type="radio" id="radio07" name="OS" value="Mac OS"/><label for="radio07"><span></span>Mac OS </label>
-		<input type="radio" id="radio08" name="OS" value="Android"/><label for="radio08"><span></span>Android </label>
-		<input type="radio" id="radio09" name="OS" value="IOS"/><label for="radio09"><span></span>iOS </label>
-		<input type="radio" id="radio10" name="OS" value="Linux"/><label for="radio10"><span></span>Linux </label>
-		<input type="radio" id="radio11" name="OS" value="Other"/><label for="radio11"><span></span>Other </label>
-		    <!--<input type="radio" name="OS" value="Windows" checked>Windows 
-  		<input type="radio" name="OS" value="Mac OS" checked>Mac OS 
-  		<input type="radio" name="OS" value="Android" checked>Android 
-  		<input type="radio" name="OS" value="IOS" checked>iOS 
-  		<input type="radio" name="OS" value="Linux" checked>Linux 
-  		<input type="radio" name="OS" value="Other" checked>Other!-->
-				
-			<br><a>Browser</a>
-  		<br><input type="radio" id="radio12" name="Browser" value="Chrome" checked/><label for="radio12"><span></span>Google Chrome </label>
-		<input type="radio" id="radio13" name="Browser" value="Firefox"/><label for="radio13"><span></span>Mozilla Firefox </label>
-		<input type="radio" id="radio14" name="Browser" value="Safari"/><label for="radio14"><span></span>Safari </label>
-		<input type="radio" id="radio15" name="Browser" value="IE"/><label for="radio15"><span></span>Internet Explorer </label>
-		<input type="radio" id="radio16" name="Browser" value="Edge"/><label for="radio16"><span></span>Microsoft Edge </label>
-		<input type="radio" id="radio17" name="Browser" value="Opera"/><label for="radio17"><span></span>Opera </label>
-		<input type="radio" id="radio18" name="Browser" value="Other"/><label for="radio18"><span></span>Other </label>
-		    <!--<input type="radio" name="Browser" value="Chrome" checked>Google Chrome 
-  		<input type="radio" name="Browser" value="Firefox" checked>Mozilla Firefox 
-  		<input type="radio" name="Browser" value="Safari" checked>Safari 
-  		<input type="radio" name="Browser" value="Explorer" checked>Internet Explorer 
-  		<input type="radio" name="Browser" value="Edge" checked>Microsoft Edge 
-			<input type="radio" name="Browser" value="Opera" checked>Opera  
-  		<input type="radio" name="Browser" value="Other" checked>Other !-->
-				
-  		<br><a>Message*</a>
-			<br><textarea name="Message" placeholder="Your Message Here"></textarea>
-		<input type="hidden" name="_next" value="//tengwartranscriber.github.io/feedback.html?alert=1" />    
-  		<input type="hidden" name="_subject" value="Feedback from Tengwar Transcriber" />
-    		<br><input type="submit" value="Submit">
-	    <script>
-var alert = document.getElementById("alert");
+        <br><input type="radio" id="radio06" name="OS" value="Windows" checked/><label for="radio06"><span></span>Windows </label>
+        <input type="radio" id="radio07" name="OS" value="Mac OS"/><label for="radio07"><span></span>Mac OS </label>
+        <input type="radio" id="radio08" name="OS" value="Android"/><label for="radio08"><span></span>Android </label>
+        <input type="radio" id="radio09" name="OS" value="IOS"/><label for="radio09"><span></span>iOS </label>
+        <input type="radio" id="radio10" name="OS" value="Linux"/><label for="radio10"><span></span>Linux </label>
+        <input type="radio" id="radio11" name="OS" value="Other"/><label for="radio11"><span></span>Other </label>	
+        <br><a>Browser</a>
+        <br><input type="radio" id="radio12" name="Browser" value="Chrome" checked/><label for="radio12"><span></span>Google Chrome </label>
+        <input type="radio" id="radio13" name="Browser" value="Firefox"/><label for="radio13"><span></span>Mozilla Firefox </label>
+        <input type="radio" id="radio14" name="Browser" value="Safari"/><label for="radio14"><span></span>Safari </label>
+        <input type="radio" id="radio15" name="Browser" value="IE"/><label for="radio15"><span></span>Internet Explorer </label>
+        <input type="radio" id="radio16" name="Browser" value="Edge"/><label for="radio16"><span></span>Microsoft Edge </label>
+        <input type="radio" id="radio17" name="Browser" value="Opera"/><label for="radio17"><span></span>Opera </label>
+        <input type="radio" id="radio18" name="Browser" value="Other"/><label for="radio18"><span></span>Other </label>	
+        <br><a>Message*</a>
+        <br><textarea name="Message" placeholder="Your Message Here"></textarea>
+        <input type="hidden" name="_next" value="//tengwartranscriber.github.io/feedback.html?alert=1" />    
+        <input type="hidden" name="_subject" value="Feedback from Tengwar Transcriber" />
+        <br><input type="submit" value="Submit">
+      <script>
+      var alert = document.getElementById("alert");
 
-window.onload = function() {
-  if(getUrlParameter("alert") == 1){
-  	alert.style.display='block';
-  }
-}
-</script>
-	    </form>
-	    <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-        <span class="site-footer-credits"><br><a title="free hit counter" href="http://statcounter.com/" target="_blank"><img src="//c.statcounter.com/11301664/0/f67d19ed/0/" alt="free hit counter" style="border:none;"></a> visitors so far</span>
-      </footer>
-
-    </section>
-
-  
+      window.onload = function() {
+        if(getUrlParameter("alert") == 1){
+          alert.style.display='block';
+        }
+      }
+      </script>
+    </form>
+    <footer class="site-footer">
+      <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
+      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      <span class="site-footer-credits"><br><a title="free hit counter" href="http://statcounter.com/" target="_blank"><img src="//c.statcounter.com/11301664/0/f67d19ed/0/" alt="free hit counter" style="border:none;"></a> visitors so far</span>
+    </footer>
+  </section>
   </body>
 </html>
 
