@@ -5,12 +5,17 @@ input[type="submit"], button{
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
-  padding: 3px;
+  padding: 7px;
 }
 input[type="submit"]:hover, button:hover{
   background-color:#414141;
   color: white;
   border-color: #212121;
+}
+input[type="submit"]:focus, button:focus{
+  background-color:#515151;
+  color: white;
+  border-color: #000000;
 }
 /*for textbox styles*/
 textarea, input[type="text"], input[type="email"] {
