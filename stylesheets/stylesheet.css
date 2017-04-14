@@ -6,10 +6,6 @@ input[type="submit"], button{
   border-style: solid;
   border-radius: 5px;
   padding: 7px;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  -moz-transition: 0.2s;
-  transition: 0.2s;
 }
 input[type="submit"]:hover, button:hover{
   background-color:#818181;
@@ -80,10 +76,6 @@ textarea {
     font-size: 22px;
     line-height: 20px;
     cursor: pointer;
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-    -moz-transition: 0.2s;
-    transition: 0.2s;
 }
 
 .closebtn:hover {
@@ -92,7 +84,12 @@ textarea {
 
 /*for the theme in general*/
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
 
 body {
   padding: 0;
@@ -116,13 +113,11 @@ a {
   border-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0.3rem;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  -moz-transition: 0.2s;
-  transition: 0.2s; }
-  .btn + .btn {
-    margin-left: 1rem; }
+  border-radius: 0.3rem; 
+}
+.btn + .btn {
+  margin-left: 1rem; 
+}
 
 .btn:hover {
   color: rgba(255, 255, 255, 0.8);
@@ -383,8 +378,5 @@ input[type="radio"]:checked + label span {
 }
 input[type="radio"] + label span,
 input[type="radio"]:checked + label span {
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  -moz-transition: 0.2s;
-  transition: 0.2s;
+  
 }
