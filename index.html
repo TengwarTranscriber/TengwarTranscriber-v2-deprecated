@@ -78,26 +78,26 @@
     </section>
     <section class="main-content">
     <div class="alert" id="more">
-  		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <p>Check out Middle-Earth Maps <a href="/maps.html">here</a>!</p>
-      </div><!--alert!-->
-      <div class="alert" id="more">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <p>Minimal version <a href="/minimal.html">here</a></p>
-      </div><!--alert!-->
-      <div class="jsrequired">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+      <p>Check out Middle-Earth Maps <a href="/maps.html">here</a>!</p>
+    </div><!--alert!-->
+    <div class="alert" id="more">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+      <p>Minimal version <a href="/minimal.html">here</a></p>
+    </div><!--alert!-->
+    <div class="jsrequired">
       <div id="Inputs">
         <default style="margin:0 15px 0 0; font-family:Times New Roman;">Type in the text field below to transcribe</default>
-	      <textarea class="jsrequired" style="margin: 0px; height: 175px; width: 100%; font-family: Times New Roman;" id="Input">Text entered here will be tranScribed</textarea>
+        <textarea class="jsrequired" id="Input">Text entered here will be tranScribed</textarea>
       </div><!--inputs!-->
       <div id="Results">
-        <default style="margin:0 15px 0 0; font-family:Times New Roman;">Transcribed text will appear here</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
+        <default style="margin:0 15px 0 0;">Transcribed text will appear here</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
         <div style="margin:15px 0 15px 0;"><!--spacer-->
-        <div class="alert" id="alert" style="display:none;font-family:Times New Roman;">
+        <div class="alert" id="alert" style="display:none;">
           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
           <strong id="alerttext" style="font-family:Segoe UI;">Here's you transription:</strong>
         </div><!--alert!-->
-        <textarea class="jsrequired" style="margin: 0px; height: 162px; width: 100%; font-family:Tengwar Feanor RegularTTF;" id="Output" readonly="">Text Entered here will be tranScribed</textarea></div>
+        <textarea class="jsrequired" style="font-family:Tengwar Feanor RegularTTF;" id="Output" readonly="">Text Entered here will be tranScribed</textarea></div>
       </div><!--results!-->
       <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick='html2canvas(document.getElementById("Output"), {onrendered: function(canvas) {window.open(canvas.toDataURL("image/png"), "_blank");}});' title="The image will open in a new window. Right click and select 'Save' to save">Download transcription as image</a>. If your browser blocks popups this might not work.</div>
       <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick="saveOutputAsText();">Download transcription as rich text</a>. You must install the font file from <a href="/more.html?font=elvish" target="_blank">here</a> for the file to display correctly</div>
