@@ -75,17 +75,16 @@
     <section class="main-content">
       <div class="jsrequired">
         <div id="Inputs">
-          <default style="margin:0 15px 0 0; font-family:Segoe UI;">Type in the text field below to transcribe</default>
-          <textarea class="jsrequired" style="margin: 0px; height: 175px; width: 100%; font-family: Segoe UI;" id="Input">Text entered here will be transcribed</textarea>
+          <default>Type in the text field below to transcribe</default>
+          <textarea class="jsrequired" id="Input">Text entered here will be transcribed</textarea>
         </div><!--inputs!-->
         <div id="Results">
-          <default style="margin:0 15px 0 0; font-family:Segoe UI;">Transcribed text will appear below</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
-          <div style="margin:15px 0 15px 0;">
+          <default style="margin:15px 0px 0px 0px;">Transcribed text will appear below</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
           <div class="alert" id="alert" style="display:none;font-family:Times New Roman;">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
             <strong id="alerttext" style="font-family:Segoe UI;">Here's you transription:</strong>
           </div><!--alert!-->
-          <textarea class="jsrequired" style="margin: 0px; height: 162px; width: 100%; font-family:dwarvishTTF;" id="Output" class="h1" readonly="">Text Entered here will be tranScribed</textarea></div>
+          <textarea class="jsrequired" style="margin: 0px; height: 162px; width: 100%; font-family:dwarvishTTF;" id="Output" class="h1" readonly="">Text Entered here will be tranScribed</textarea>
         </div><!--results!-->
         <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick='html2canvas(document.getElementById("Output"), {onrendered: function(canvas) {window.open(canvas.toDataURL("image/png"), "_blank");}});' title="The image will open in a new window. Right click and select 'Save' to save">Download transcription as image</a>. If your browser blocks popups this might not work.</div>
         <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick="saveOutputAsText();">Download transcription as rich text</a>. You must install the font file from <a href="/more.html?font=dwarvish" target="_blank">here</a> for the file to display correctly</div>
