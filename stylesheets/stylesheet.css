@@ -1,4 +1,9 @@
-
+textarea {
+  margin: 0px; 
+  height: 162px; 
+  width: 100%;
+  border-radius: 5px;
+}
 /*for elements that require javascript*/
 .jsrequired { 
   background-color: #ff0000;
