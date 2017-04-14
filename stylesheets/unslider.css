@@ -39,7 +39,7 @@ unslider-wrap{
   position:absolute;
   left:20px;
   z-index:2;
-  cursor:pointer
+  cursor:pointer;
   display: block;
   width: 32px;
   height: 32px;
