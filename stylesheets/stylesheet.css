@@ -5,7 +5,7 @@ textarea, input[type="text"], input[type="email"] {
   border-radius: 5px;
   border-style:solid;
   border-color:#515151;
-  border-width:2px;
+  border-width:1px;
 }
 textarea:focus, input[type="text"]:focus, input[type="email"]:focus  {
   border-color:#2196F3;
@@ -349,10 +349,10 @@ input[type="radio"] + label span {
   border-radius: 50%;
 }
 input[type="radio"] + label span {
-  background-color: #000000;
+  background-color: #515151;
 }
 input[type="radio"]:checked + label span {
-  background-color: #49d7ff;
+  background-color: #2196F3;
 }
 input[type="radio"] + label span,
 input[type="radio"]:checked + label span {
