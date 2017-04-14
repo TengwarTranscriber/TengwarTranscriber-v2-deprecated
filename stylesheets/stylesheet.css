@@ -1,10 +1,9 @@
-* {
-  box-sizing: border-box; }
 
+/*for elements that require javascript*/
 .jsrequired { 
   background-color: #ff0000;
 }
-
+/*for the loading bar*/
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -28,20 +27,7 @@
   height: 10px;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #606c71; }
-
-a {
-  color: #1e6bb8;
-  text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
-
+/*for alerts*/
 .alert {
     padding: 20px;
     background-color: #2196F3;
@@ -64,6 +50,24 @@ a {
 .closebtn:hover {
     color: black;
 }
+
+/*for the theme in general*/
+* {
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #606c71; }
+
+a {
+  color: #1e6bb8;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
 
 .btn {
   display: inline-block;
@@ -127,7 +131,7 @@ a {
 
 @media screen and (min-width: 64em) {
   .page-header {
-    padding: 5rem 6rem; } }
+    padding: 4rem 5rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .page-header {
@@ -310,6 +314,7 @@ a {
   .site-footer {
     font-size: 0.9rem; } }
 
+/*for the custom radio buttons*/
 input[type="radio"] {
   display: none;
 }
