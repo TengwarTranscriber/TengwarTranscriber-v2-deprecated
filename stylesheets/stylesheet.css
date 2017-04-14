@@ -8,7 +8,7 @@ input[type="submit"], button{
   padding: 7px;
 }
 input[type="submit"]:hover, button:hover{
-  background-color:#414141;
+  background-color:#818181;
   color: white;
   border-color: #212121;
 }
