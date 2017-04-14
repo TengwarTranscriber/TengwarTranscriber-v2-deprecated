@@ -1,3 +1,22 @@
+/*for links*/
+a:link {
+    color: #2196F3;
+}
+/* visited link */
+a:visited {
+    color: #1C7ECC;
+}
+
+/* mouse over link */
+a:hover {
+    color: #239DFF;
+}
+
+/* selected link */
+a:active {
+    color: #1C7ECC;
+}
+/*for buttons*/
 input[type="submit"], button{
   background-color:#515151;
   color: white;
