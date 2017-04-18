@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Tengwar Feanor Elvish Transcriber | Home</title>
+    <title>Tengwar Feanor Elvish Transcriber | Windows App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -10,46 +10,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <script type="text/javascript" src="html2canvas.js"></script>
     <script src="/pace.js"></script>
-    <style type="text/css">
-		  body {
-			text-rendering: optimizeLegibility;
-			font-feature-settings: "kern";
-			-moz-font-feature-settings: "kern=1";
-			-ms-font-feature-settings: "kern";
-			-webkit-font-feature-settings: "kern";
-			-o-font-feature-settings: "kern";
-		  }
-
-		  @font-face {
-			  font-family: 'Tengwar Feanor RegularSVG';
-			  src: url('tengwarfeanorregular.svg#Tengwar Feanor Regular') format('svg');
-		  }
-	
-		  @font-face {
-			  font-family: 'Tengwar Feanor RegularTTF';
-			  src: url('tengwarfeanorregular.ttf') format('truetype');
-		  } 
-		
-		  @font-face {
-			  font-family: 'Tengwar Feanor RegularEOT';
-			  src: url('Tengwar Feanor Regular.eot');
-		  } 
-		  div#results {
-			  font-family: 'Tengwar Feanor RegularEOT', 'Tengwar Feanor RegularTTF', 'Tengwar Feanor RegularSVG';
-			  margin: 30px 0 30px 0;
-		  }
-		  textarea#output {
-			  font-family: 'Tengwar Feanor RegularEOT', 'Tengwar Feanor RegularTTF', 'Tengwar Feanor RegularSVG';
-  			font-size: 20pt;
-		  } 
-	</style>
-    <script language="JavaScript">
-     <!-- Begin
-      function Go(input){
-        document.getElementById('Output').innerHTML = input;
-      }
-      //  End -->
-    </script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="/onload.js"></script>
     <script src="/unslider.js"></script>
@@ -57,7 +18,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">TFET - Elvish Transcriber</h1>
+      <h1 class="project-name">TFET - Windows App</h1>
       <div id="HEADER"></div>
       <noscript>
         <a href="https://tengwartranscriber.github.io/abouttengwar.html" class="btn">About Tengwar</a>
@@ -76,97 +37,10 @@
       </noscript>
     </section>
     <section class="secondary-header">
-      <h1 class="project-name">TFET - Elvish Transcriber</h1>
+      <h1 class="project-name">TFET - Windows App</h1>
     </section>
     <section class="main-content" style="z-index:-1">
-    <div class="alert" id="more">
-  		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <p>Check out Middle-Earth Maps <a href="/maps.html">here</a>!</p>
-      </div><!--alert!-->
-      <div class="alert" id="more">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <p>Minimal version <a href="/minimal.html">here</a></p>
-      </div><!--alert!-->
-      <div class="jsrequired">
-      <div id="Inputs">
-        <default style="margin:0 15px 0 0; font-family:Times New Roman;">Type in the text field below to transcribe</default>
-	      <textarea class="jsrequired" style="margin: 0px; height: 175px; width: 100%; font-family: Times New Roman;" id="Input">Text entered here will be tranScribed</textarea>
-      </div><!--inputs!-->
-      <div id="Results">
-        <default style="margin:0 15px 0 0; font-family:Times New Roman;">Transcribed text will appear here</default><input hidden id="Go" type="button" value="Transcribe" oninput="Go();">
-        <div style="margin:15px 0 15px 0;"><!--spacer-->
-        <div class="alert" id="alert" style="display:none;font-family:Times New Roman;">
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-          <strong id="alerttext" style="font-family:Segoe UI;">Here's you transription:</strong>
-        </div><!--alert!-->
-        <textarea class="jsrequired" style="margin: 0px; height: 162px; width: 100%; font-family:Tengwar Feanor RegularTTF;" id="Output" readonly="">Text Entered here will be tranScribed</textarea></div>
-      </div><!--results!-->
-      <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick='html2canvas(document.getElementById("Output"), {onrendered: function(canvas) {window.open(canvas.toDataURL("image/png"), "_blank");}});' title="The image will open in a new window. Right click and select 'Save' to save">Download transcription as image</a>. If your browser blocks popups this might not work.</div>
-      <div style="margin: 0px 0px 10px 0px"><a style="cursor:pointer;" onclick="saveOutputAsText();">Download transcription as rich text</a>. You must install the font file from <a href="/more.html?font=elvish" target="_blank">here</a> for the file to display correctly</div>
-    </div><!--jsrequired!-->
-    <script language="JavaScript">
-    <!-- Begin
-      var Go = document.getElementById('Go');
-      var Input = document.getElementById('Input');
-      var Output = document.getElementById('Output');
-		  var alert = document.getElementById("alert");
-	   
-      Go.addEventListener('click', function() {
-        Output.value = Input.value;
-      }, false);
-      
-      Input.addEventListener('input', function() {
-        Output.value = " "+Input.value.replace(/ a/g, " A").replace(/ e/g, " E").replace(/ i/g, " I").replace(/ o/g, " O").replace(/ u/g, " U").replace(/aa/g, "aA").replace(/ae/g, "aE").replace(/ai/g, "aI").replace(/ao/g, "aO").replace(/au/g, "aU").replace(/ea/g, "eA").replace(/ee/g, "eE").replace(/ei/g, "eI").replace(/eo/g, "eO").replace(/eu/g, "eU").replace(/ia/g, "iA").replace(/ie/g, "iE").replace(/ii/g, "iI").replace(/io/g, "iO").replace(/iu/g, "iU").replace(/oa/g, "oA").replace(/oe/g, "oE").replace(/oi/g, "oI").replace(/oo/g, "eO").replace(/ou/g, "oU").replace(/ua/g, "uA").replace(/ue/g, "uE").replace(/ui/g, "uI").replace(/uo/g, "uO").replace(/uu/g, "uU").replace(/ck/g, "c").replace(/Aa/g, "AA").replace(/Ae/g, "AE").replace(/Ai/g, "AI").replace(/Ao/g, "AO").replace(/Au/g, "AU").replace(/Ea/g, "EA").replace(/Ee/g, "EE").replace(/Ei/g, "EI").replace(/Eo/g, "EO").replace(/Eu/g, "EU").replace(/Ia/g, "IA").replace(/Ie/g, "IE").replace(/Ii/g, "II").replace(/Io/g, "IO").replace(/Iu/g, "IU").replace(/Oa/g, "OA").replace(/Oe/g, "OE").replace(/Oi/g, "OI").replace(/Oo/g, "OO").replace(/Ou/g, "OU").replace(/Ua/g, "UA").replace(/Ue/g, "UE").replace(/Ui/g, "UI").replace(/Uo/g, "UO").replace(/Uu/g, "UU");
-        alert.style.display='none';
-      }, false);
-      //  End -->
-    </script>
-    <script>
-      var Input = document.getElementById('Input');
-      var Output = document.getElementById('Output');
-      var alert = document.getElementById("alert");
-      var alerttext = document.getElementById("alerttext");
-		   
-      function getUrlParameter(name) {
-        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-        var results = regex.exec(location.search);
-        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-      }
-      
-      function saveOutputAsText() {
-        download("transcription.rtf", convertHtmlToRtf(Output.value))
-      }
-      
-      function convertHtmlToRtf(html) {
-        if (!(typeof html === "string" && html)) {
-          return null;
-        }
-        var richText = html;
-        richText ="{\\rtf1\\ansi\\deff0 {\\fonttbl {\\f0 Tengwar Feanor;}}\n" + richText +"\n}";
-        return richText;
-      }
-      
-      function download(filename, text) {
-        var element = document.createElement('a');
-        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-        element.setAttribute('download', filename);
-        element.style.display = 'none';
-        document.body.appendChild(element);
-        element.click();
-        document.body.removeChild(element);
-      }
-      
-      window.onload = function() {
-        if( getUrlParameter("text") ){
-          Input.value = getUrlParameter("text")
-          Output.value = " "+Input.value.replace(/ a/g, " A").replace(/ e/g, " E").replace(/ i/g, " I").replace(/ o/g, " O").replace(/ u/g, " U").replace(/aa/g, "aA").replace(/ae/g, "aE").replace(/ai/g, "aI").replace(/ao/g, "aO").replace(/au/g, "aU").replace(/ea/g, "eA").replace(/ee/g, "eE").replace(/ei/g, "eI").replace(/eo/g, "eO").replace(/eu/g, "eU").replace(/ia/g, "iA").replace(/ie/g, "iE").replace(/ii/g, "iI").replace(/io/g, "iO").replace(/iu/g, "iU").replace(/oa/g, "oA").replace(/oe/g, "oE").replace(/oi/g, "oI").replace(/oo/g, "eO").replace(/ou/g, "oU").replace(/ua/g, "uA").replace(/ue/g, "uE").replace(/ui/g, "uI").replace(/uo/g, "uO").replace(/uu/g, "uU").replace(/ck/g, "c").replace(/Aa/g, "AA").replace(/Ae/g, "AE").replace(/Ai/g, "AI").replace(/Ao/g, "AO").replace(/Au/g, "AU").replace(/Ea/g, "EA").replace(/Ee/g, "EE").replace(/Ei/g, "EI").replace(/Eo/g, "EO").replace(/Eu/g, "EU").replace(/Ia/g, "IA").replace(/Ie/g, "IE").replace(/Ii/g, "II").replace(/Io/g, "IO").replace(/Iu/g, "IU").replace(/Oa/g, "OA").replace(/Oe/g, "OE").replace(/Oi/g, "OI").replace(/Oo/g, "OO").replace(/Ou/g, "OU").replace(/Ua/g, "UA").replace(/Ue/g, "UE").replace(/Ui/g, "UI").replace(/Uo/g, "UO").replace(/Uu/g, "UU");
-          alert.style.display='block';
-          alerttext.innerHTML = '"'+getUrlParameter("text")+'"'+" transcribes to:"
-          alert.scrollIntoView();
-        }
-      }
-    </script>
+    <h1><a href="https://doc-04-a0-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ra9kc6rs0guai34spk528pbsv9tuoohe/1492531200000/04349680881603713416/*/0B_psIC-BvyqBcC1tUVdzNUNOMk0?e=download">Download the Tengwar Transcriber Windows App</a></h1>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
