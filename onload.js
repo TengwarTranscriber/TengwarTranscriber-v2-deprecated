@@ -8,6 +8,6 @@ function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
-    console.log("Url parameter="+decodeURIComponent(results[1].replace(/\+/g, ' '))
+    console.log("Url parameter="+decodeURIComponent(results[1].replace(/\+/g, ' ')));
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
