@@ -1,7 +1,7 @@
 $(function(){
       $("#HEADER").load("/header.html"); 
       $(".jsrequired").css("background-color", "white");
-      console.warn("stylesheets/unslider.css doesn't exist. I just never bothered to change the javascript code that asks for it.")
+      console.error("I never bothered to fix the two errors above, but I did bother to write code that writes error messages explaining the error messages that I can't be bothered to fix.")
       console.log("%cWhat are you doing looking at the console? My code is no secret. Go to https://www.github.com/tengwartranscriber/tengwartranscriber.github.io to see it. Incidentally, the code that just ran was $('#HEADER').load('/header.html'); $('.jsrequired').css('background-color', 'white');", "background: black; color: white; font-size: 20px");
 });
 
