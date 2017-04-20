@@ -43,11 +43,11 @@
       <script>
       $("#element2").click(function(){
         var text = $("#element1").val();
-        $("#element1").val(text.replace('/\n/g', '[newline was here]'));
+        $("#element1").val(text.replace(/\n/g, '[newline was here]'));
       });
       $(document).ready(function() {
         var text = $("#element1").val();
-        $("#element1").val(text.replace('\n', '[newline was here]'));
+        $("#element1").val(text.replace(/\n/g, '[newline was here]'));
       });
       </script>
       <footer class="site-footer">
