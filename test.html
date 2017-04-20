@@ -38,7 +38,13 @@
       <h1 class="project-name">TFET - About Tengwar</h1>
     </section>
     <section class="main-content">
-	    <h1>there should be a break between this line &#10 and this one</h1>
+      <h1 id= "element1">there should be a break between this line <br> and this one</h1>
+      <script>
+      $(document).ready(function() {
+        var text = $("#element1").text();
+        $("#element1").text(text.replace('\n', '[Newline Was Here]'));
+      });
+      </script>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TengwarTranscriber/tengwartranscriber.github.io">This page</a> is maintained by <a href="https://github.com/MEDavy">MEDavy</a>.</span>
 	<span class="site-footer-owner"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/us/88x31.png"></a>This work was obtained from <a href="https://en.wikipedia.org/wiki/Tengwar">Wikipedia</a> and is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-ShareAlike 3.0 United States License</a>.</span>
