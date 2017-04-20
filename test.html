@@ -41,7 +41,7 @@
       <textarea id= "element1">there should be a break between this line &#10; and this one</textarea>
        <button id="element2">Click to remove newlines</button>
       <script>
-      $("p").click(function(){
+      $("#element2").click(function(){
         var text = $("#element1").text();
         $("#element1").text(text.replace('\n', '[newline was here]'));
       });
