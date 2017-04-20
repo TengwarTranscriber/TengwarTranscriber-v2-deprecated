@@ -38,11 +38,11 @@
       <h1 class="project-name">TFET - About Tengwar</h1>
     </section>
     <section class="main-content">
-      <h1 id= "element1">there should be a break between this line <br> and this one</h1>
+      <h1 id= "element1">there should be a break between this line <br/> and this one</h1>
       <script>
       $(document).ready(function() {
         var text = $("#element1").text();
-        $("#element1").text(text.replace('e', '[e was here]'));
+        $("#element1").text(text.replace('\n', '[newline was here]'));
       });
       </script>
       <footer class="site-footer">
