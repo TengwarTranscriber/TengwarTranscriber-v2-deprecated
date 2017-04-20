@@ -42,12 +42,12 @@
        <button id="element2">Click to remove newlines</button>
       <script>
       $("#element2").click(function(){
-        var text = $("#element1").text();
-        $("#element1").text(text.replace('\n', '[newline was here]'));
+        var text = $("#element1").val();
+        $("#element1").val(text.replace('/\n/g', '[newline was here]'));
       });
       $(document).ready(function() {
-        var text = $("#element1").text();
-        $("#element1").text(text.replace('\n', '[newline was here]'));
+        var text = $("#element1").val();
+        $("#element1").val(text.replace('\n', '[newline was here]'));
       });
       </script>
       <footer class="site-footer">
