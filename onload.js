@@ -15,6 +15,7 @@ function getUrlParameter(name) {
 }
 
 function setCookie(cname,cvalue,exdays) {
+    alert("Cookie:"+ cname + " Set to:" + cvalue);
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
@@ -31,6 +32,7 @@ function getCookie(cname) {
             c = c.substring(1);
         }
         if (c.indexOf(name) == 0) {
+            alert("Cookie:"+ cname + " read as:" + c.substring(name.length, c.length));
             return c.substring(name.length, c.length);
         }
     }
