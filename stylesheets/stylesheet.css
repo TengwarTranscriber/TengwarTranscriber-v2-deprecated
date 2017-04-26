@@ -167,6 +167,7 @@ a:hover {
   background-color: #515151;
   background-image: linear-gradient(120deg, #515151, #515151); 
   position:relative;
+  width:100%;
   z-index:5;
 }
 
