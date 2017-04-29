@@ -6,10 +6,6 @@ $(function(){
       console.log("%cWhat are you doing looking at the console? My code is no secret. Go to https://www.github.com/tengwartranscriber/tengwartranscriber.github.io to see it. Incidentally, the code that just ran was $('#HEADER').load('/header.html'); $('.jsrequired').css('background-color', 'white');", "background: black; color: white; font-size: 20px");
 });
 
-$('.secondary-header').click(function() {
-    window.scrollTo(0, 0);
-});
-
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
