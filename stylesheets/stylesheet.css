@@ -164,6 +164,7 @@ a:hover {
 
 .page-header {
   color: #fff;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   background-color: #515151;
   background-image: linear-gradient(120deg, #515151, #515151); 
@@ -174,6 +175,7 @@ a:hover {
 
 .secondary-header {
   color: #fff;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   background-color: #515151;
   background-image: linear-gradient(120deg, #515151, #515151); 
