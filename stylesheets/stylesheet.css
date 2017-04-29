@@ -352,16 +352,21 @@ a:hover {
     font-size: 1rem; } }
 
 .site-footer {
-  padding-top: 2rem;
+  padding: 1em;
   margin-top: 2rem;
-  border-top: solid 1px #eff0f1; }
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19); 
+  border-radius: 5px;
+  background-color: #515151;
+}
 
 .site-footer-owner {
   display: block;
-  font-weight: bold; }
+  font-weight: bold; 
+}
 
 .site-footer-credits {
-  color: #819198; }
+  color: #819198; 
+}
 
 @media screen and (min-width: 64em) {
   .site-footer {
