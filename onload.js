@@ -1,5 +1,6 @@
 $(function(){
-      $("#HEADER").load("/header.html"); 
+      $("#HEADER").load("/header.html");
+      $("#ALERTS").load("/alerts.html");
       $(".jsrequired").css("background-color", "white");
       console.error("I never took the time to fix the two errors involving 'unslider.css', but I did take the time to write code that writes error messages explaining the error messages that I didn't take the time to fix.");
       console.error("Now I took the time to fix the errors but I didn't take the time to remove the code that writes the error messages explaining the error messages that I previously didn't take the time to fix; however I did take the time to write an error message explaining the error message explaining the error message that wasn't fixed when I wrote the first error message but was fixed by the time I wrote the second error message.");
