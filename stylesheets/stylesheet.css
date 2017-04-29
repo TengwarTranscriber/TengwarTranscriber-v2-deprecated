@@ -171,6 +171,7 @@ a:hover {
   position:relative;
   margin:0em 1em 1em 1em;
   z-index:5;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .secondary-header {
@@ -185,6 +186,7 @@ a:hover {
   width:calc(100% - 2em);
   left: 1em;
   top: 0px;
+  border-radius: 0px 0px 5px 5px;
 }
 
 @media screen and (min-width: 64em) {
