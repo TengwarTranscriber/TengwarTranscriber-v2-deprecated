@@ -42,6 +42,21 @@ textarea {
   transition: background-color 0s linear;
   border-radius: 5px;
 }
+
+.jswarning {
+  background-color: #ff0000;
+  border-radius: 5px;
+  color:#ffffff;
+  text-align:center;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+  padding: 1em;
+}
+
+.jswarning h1, .jswarning h2 {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
 /*for the loading bar*/
 .pace {
   -webkit-pointer-events: none;
