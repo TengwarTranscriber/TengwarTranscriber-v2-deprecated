@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" manifest="example.appcache">
   <head>
     <meta charset="UTF-8">
-    <title>Tengwar Feanor Elvish Transcriber | Home</title>
+    <title>Tengwar Feanor Elvish Transcriber | AppCache Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <script type="text/javascript" src="html2canvas.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/github-light.css" media="screen">
+    <script type="text/javascript" src="/html2canvas.js"></script>
     <script src="/pace.js"></script>
     <!--icon info!-->
     <link rel="icon" type="image/png" href="/icons/32x32.png" sizes="32x32">
@@ -34,17 +34,17 @@
 
 		  @font-face {
 			  font-family: 'Tengwar Feanor RegularSVG';
-			  src: url('tengwarfeanorregular.svg#Tengwar Feanor Regular') format('svg');
+			  src: url('/tengwarfeanorregular.svg#Tengwar Feanor Regular') format('svg');
 		  }
 	
 		  @font-face {
 			  font-family: 'Tengwar Feanor RegularTTF';
-			  src: url('tengwarfeanorregular.ttf') format('truetype');
+			  src: url('/tengwarfeanorregular.ttf') format('truetype');
 		  } 
 		
 		  @font-face {
 			  font-family: 'Tengwar Feanor RegularEOT';
-			  src: url('Tengwar Feanor Regular.eot');
+			  src: url('/Tengwar Feanor Regular.eot');
 		  }
 		  textarea#output {
 			  font-family: 'Tengwar Feanor RegularEOT', 'Tengwar Feanor RegularTTF', 'Tengwar Feanor RegularSVG';
@@ -63,7 +63,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">TFET - Elvish Transcriber</h1>
+      <h1 class="project-name">TFET - AppCache Test</h1>
       <div id="HEADER"></div>
       <noscript>
         <a href="https://tengwartranscriber.github.io/abouttengwar.html" class="btn">About Tengwar</a>
@@ -82,7 +82,7 @@
       </noscript>
     </section>
     <section class="secondary-header">
-      <h1 class="project-name">TFET - Elvish Transcriber</h1>
+      <h1 class="project-name">TFET - AppCache Test</h1>
     </section>
     <section class="main-content">
     <div id="ALERTS"></div>
