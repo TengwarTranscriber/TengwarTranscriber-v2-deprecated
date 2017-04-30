@@ -19,5 +19,8 @@ https://fonts.googleapis.com/css?family=Open+Sans:400,700
 # -------------------assets-------------------
 /favicon.ico
 
-FALLBACK
+FALLBACK:
 http://imgur.com/ /offlineimage.png
+
+NETWORK:
+*
