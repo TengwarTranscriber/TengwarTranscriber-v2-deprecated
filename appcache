@@ -5,6 +5,7 @@ CACHE MANIFEST
 /stylesheets/github-light.css
 /stylesheets/normalize.css
 # -------------------component pages-------------------
+/index.html
 /header.html
 /alerts.html
 /404.html
