@@ -1,6 +1,8 @@
 CACHE MANIFEST
 #v1
 /stylesheets/stylesheet.css
+/stylesheets/github-light.css
+/stylesheets/normalize.css
 /header.html
 /alerts.html
 /onload.js
