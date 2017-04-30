@@ -6,11 +6,9 @@ $(function(){
   $(".secondary-header").click(function(){
     $('html, body').animate({ scrollTop: 0 }, 'fast');
   });
-  if (navigator.onLine) {
-    
-  }else{
-    alert("You seem to be offline.\nAny pages on this site you have previously visited from this browser should still load.\nHowever, depending on your browser, they may render incorrectly.");
-  }
+  window.addEventListener("offline", function(e) {
+   alert("You seem to be offline.\nAny pages on this site you have previously visited from this browser should still load.\nHowever, depending on your browser, they may render incorrectly.");
+  }, false);
 });
 
 function getUrlParameter(name) {
