@@ -7,6 +7,7 @@ CACHE MANIFEST
 # -------------------component pages-------------------
 /header.html
 /alerts.html
+/404.html
 # -------------------javascript-------------------
 https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
 /onload.js
