@@ -6,9 +6,12 @@ $(function(){
   $(".secondary-header").click(function(){
     $('html, body').animate({ scrollTop: 0 }, 'fast');
   });
-  window.applicationCache.addEventListener("error", function(e) {
-    alert("Error fetching manifest: a good chance we are offline");
-  });
+  window.addEventListener("offline", function(e) {
+    alert("offline");
+  }, false);
+  window.addEventListener("online", function(e) {
+    alert("online");
+  }, false);
 });
 
 function getUrlParameter(name) {
