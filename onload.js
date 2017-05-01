@@ -6,9 +6,9 @@ $(function(){
   $(".secondary-header").click(function(){
     $('html, body').animate({ scrollTop: 0 }, 'fast');
   });
-  window.addEventListener("offline", function(e) {
-   window.alert("You seem to be offline.\nAny pages on this site you have previously visited from this browser should still load.\nHowever, depending on your browser, they may render incorrectly.");
-  }, false);
+  window.applicationCache.addEventListener("error", function(e) {
+    alert("Error fetching manifest: a good chance we are offline");
+  });
 });
 
 function getUrlParameter(name) {
