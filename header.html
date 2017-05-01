@@ -5,13 +5,19 @@
         $("#more_button").toggle();
         $("#more_menu").slideToggle("slow");
         $("#less_button").toggle();
-      });
+      });//end more_button.click
       $("#less_button").click(function(){
         $("#more_button").toggle();
         $("#more_menu").slideToggle("slow");
-	$("#less_button").toggle();
-      });
-    });
+	      $("#less_button").toggle();
+      });//end less_button.click
+	    window.addEventListener("offline", function(e) {
+        $("#offline_warning").show();
+      }, false);
+      window.addEventListener("online", function(e) {
+        $("#offline_warning").hide();
+      }, false);
+    });//end document.ready
     </script>
       <a href="/index.html" class="btn">Home</a>
       <a href="/dwarvish.html" class="btn">Dwarvish Transcriber</a>
@@ -30,6 +36,10 @@
       <a href="/feedback.html" class="btn">Feedback</a>
       <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/" class="btn" target="_blank">View Source</a>
       <a href="https://github.com/TengwarTranscriber/TengwarTranscriber.github.io/zipball/master" class="btn">Download Source</a></div>
+      <div class="jswarning"  id="offline_warning" style="display: none;">
+          <h1>You appear to be offline</h1>
+          <h2>Any recently visited pages on this site should load; however, depending on your browser, they may render incompletely.</h2>
+        </div>
       <!--<a href="https://github.com/jasonlong/geo_pattern/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/jasonlong/geo_pattern/tarball/master" class="btn">Download .tar.gz</a>!-->
       
