@@ -16,6 +16,9 @@
       } else {
         $("#offline_warning").show();
       }//end if
+      window.applicationCache.addEventListener("error", function(e) {
+        $("#offline_warning").show();
+      });
       window.addEventListener("offline", function(e) {
         $("#offline_warning").show();
       }, false);
