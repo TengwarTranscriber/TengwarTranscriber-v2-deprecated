@@ -6,12 +6,6 @@ $(function(){
   $(".secondary-header").click(function(){
     $('html, body').animate({ scrollTop: 0 }, 'fast');
   });
-  window.addEventListener("offline", function(e) {
-    alert("offline");
-  }, false);
-  window.addEventListener("online", function(e) {
-    alert("online");
-  }, false);
 });
 
 function getUrlParameter(name) {
