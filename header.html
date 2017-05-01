@@ -11,7 +11,12 @@
         $("#more_menu").slideToggle("slow");
 	      $("#less_button").toggle();
       });//end less_button.click
-	    window.addEventListener("offline", function(e) {
+      if (navigator.onLine) {
+        $("#offline_warning").hide();
+      } else {
+        $("#offline_warning").show();
+      }//end if
+      window.addEventListener("offline", function(e) {
         $("#offline_warning").show();
       }, false);
       window.addEventListener("online", function(e) {
