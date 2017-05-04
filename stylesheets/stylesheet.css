@@ -113,6 +113,18 @@ textarea {
     color: black;
 }
 
+/*for floating elements*/
+
+.floatleft {
+  float: left;
+  width: 50%;
+}
+
+.floatright {
+  float: right;
+  width: 50%;
+}
+
 /*for the theme in general*/
 * {
   box-sizing: border-box;
