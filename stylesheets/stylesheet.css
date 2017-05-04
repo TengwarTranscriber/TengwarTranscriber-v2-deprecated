@@ -116,12 +116,12 @@ textarea {
 /*for floating elements*/
 
 .floatleft {
-  float: left;
+  clear: left;
   width: 50%;
 }
 
 .floatright {
-  float: right;
+  clear: right;
   width: 50%;
 }
 
@@ -380,6 +380,7 @@ a:hover {
     font-size: 1rem; } }
 
 .site-footer {
+  clear: left;
   padding: 1em;
   margin-top: 2rem;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19); 
