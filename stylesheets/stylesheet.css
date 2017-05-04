@@ -122,6 +122,7 @@ textarea {
 
 .floatright {
   margin-left: 50%;
+  padding-left: 2em;
   width: 50%;
 }
 
