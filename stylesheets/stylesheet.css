@@ -116,12 +116,12 @@ textarea {
 /*for floating elements*/
 
 .floatleft {
-  clear: left;
+  float: left;
   width: 50%;
 }
 
 .floatright {
-  clear: right;
+  margin-left: 50%;
   width: 50%;
 }
 
