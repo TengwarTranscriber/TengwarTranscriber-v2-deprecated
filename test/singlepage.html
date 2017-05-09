@@ -52,7 +52,11 @@
     </section>
     <section class="main-content" style="z-index:-1">
     <script>
-      $('.main-content').load("transcriber.html");
+      if(window.location.hash == "transcriber") {
+        $('.main-content').load("transcriber.html");
+      } else {
+        // Fragment doesn't exist
+      }
       </script>
     </section>
 
