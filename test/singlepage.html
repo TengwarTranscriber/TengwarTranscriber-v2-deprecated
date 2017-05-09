@@ -51,11 +51,12 @@
       <h1 class="project-name">TFET - Single Page Test</h1>
     </section>
     <section class="main-content" style="z-index:-1">
+      <h1> set hash to <a href='#transcriber'>'transcriber'</a> or <a href='#cookies'>'cookies'</a></h1>
     <script>
-      if(window.location.hash == "transcriber") {
+      if(window.location.hash == "#transcriber") {
         $('.main-content').load("transcriber.html");
-      } else {
-        // Fragment doesn't exist
+      } else if(window.location.hash == "#cookies") {
+        $('.main-content').load("cookies.html");
       }
       </script>
     </section>
