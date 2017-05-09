@@ -58,6 +58,13 @@
       } else if(window.location.hash == "#cookies") {
         $('.main-content').load("cookies.html");
       }
+      $(window).on('hashchange', function() {
+        if(window.location.hash == "#transcriber") {
+        $('.main-content').load("transcriber.html");
+      } else if(window.location.hash == "#cookies") {
+        $('.main-content').load("cookies.html");
+      }
+      });
       </script>
     </section>
 
