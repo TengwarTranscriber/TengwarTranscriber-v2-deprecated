@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://tengwartranscriber.github.io/</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/index.html</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/dwarvish.html</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/abouttengwar.html</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/aboutdwarvish.html</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/welshpronunciation.html</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/songs.html</loc>
+    <video:video>
+      <video:content_loc>
+        https://youtu.be/uxfoa23skHg
+      </video:content_loc>
+      <video:title>Song of Durin (Complete Edition) - Clamavi de Profundis</video:title>  
+      <video:description>
+        An excellent arrangement by Clamavi De Profundis.
+      </video:description>
+    </video:video>
+    <video:video>
+      <video:content_loc>
+        https://youtu.be/LY0lLcz3Qis
+      </video:content_loc>
+      <video:title>Song of the Lonely Mountain (Complete Edition) - Clamavi de Profundis</video:title>  
+      <video:description>
+        Another excellent arrangement by Clamavi De Profundis. Note that the first and last verses of Song of Durin are inserted after verse 9.
+      </video:description>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/maps.html</loc>
+    <image:image>
+       <image:loc>https://imgur.com/iMX16Oo.jpg</image:loc>
+       <image:caption>The Wilderland Map (The Hobbit)</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://imgur.com/hvQ2EDx.jpg</image:loc>
+       <image:caption>Thror's Map (The Hobbit)</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://imgur.com/nPOtnBd.jpg</image:loc>
+       <image:caption>Middle-Earth Map (The Lord of the Rings)</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/app.html</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/more.html?font=elvish</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/more.html?font=dwarvish</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/sideways.html</loc>
+  </url>
+  <url>
+    <loc>https://tengwartranscriber.github.io/feedback.html</loc>
+  </url>
+</urlset>
