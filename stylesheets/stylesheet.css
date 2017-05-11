@@ -28,7 +28,6 @@ textarea, input[type="text"], input[type="email"] {
 }
 textarea:focus, input[type="text"]:focus, input[type="email"]:focus  {
   border-color:#2196F3;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
 }
 textarea {
   height: 162px; 
@@ -48,7 +47,6 @@ textarea {
   border-radius: 5px;
   color:#ffffff;
   text-align:center;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
   padding: 1em;
 }
 
@@ -89,7 +87,6 @@ textarea {
     width: 100%;
     margin: 0px 0px 10px 0px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .alert > p > a {
@@ -194,7 +191,6 @@ a:hover {
 
 .page-header {
   color: #fff;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   background-color: #515151;
   position:relative;
@@ -380,7 +376,6 @@ a:hover {
   clear: left;
   padding: 1em;
   margin-top: 2rem;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19); 
   border-radius: 5px;
   background-color: #515151;
 }
