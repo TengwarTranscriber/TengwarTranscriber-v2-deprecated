@@ -1,4 +1,15 @@
-
+/*for google translate widget*/
+.goog-te-menu-value {
+  color:white !important;
+}
+.goog-te-gadget-simple {
+  background-color:#515151 !important;
+  border-color:white !important;
+  border-width:1px !important;
+}
+.goog-te-gadget-icon {
+  display:none !important;
+}
 /*for buttons*/
 input[type="submit"], button{
   background-color:#515151;
