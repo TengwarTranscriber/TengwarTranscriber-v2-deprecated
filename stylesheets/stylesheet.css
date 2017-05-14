@@ -2,7 +2,6 @@
  .page-header {
    display: none !important;
    visibility: hidden !important;
-   max-width: 2in;
  }
  article a[href^=http]:after {
       content:" <" attr(href) "> ";
