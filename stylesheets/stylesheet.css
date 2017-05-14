@@ -1,3 +1,21 @@
+@media print {
+ .page-header {
+   display: none !important;
+   visibility: hidden !important;
+   max-width: 2in;
+ }
+ article a[href^=http]:after {
+      content:" <" attr(href) "> ";
+ }
+ .secondary-header{
+   display:none !important;
+   visibility: hidden !important;
+ }
+ .alert {
+   display: none !important;
+   visibility: hidden !important;
+ }
+}
 /*for google translate widget*/
 .goog-te-menu-value {
   color:white !important;
