@@ -3,16 +3,36 @@
    display: none !important;
    visibility: hidden !important;
  }
- article a[href^=http]:after {
-      content:" <" attr(href) "> ";
+ .secondary-header {
+   position:relative !important;
+   box-shadow:none !important;
+   color:black !important;
+   border-style:solid !important;
+   border-color:black !important;
+   border-width:1px !important;
  }
- .secondary-header{
-   display:none !important;
-   visibility: hidden !important;
+ a:after {
+      content:"(" attr(href) ")";
+      text-decoration:underline;
  }
  .alert {
    display: none !important;
    visibility: hidden !important;
+ }
+ #Results textarea {
+   font-size: x-large !important;
+ }
+ textarea {
+   border-style:none !important;
+ }
+ #Inputs default, #Results default {
+   display:none !important;
+ }
+ .site-footer {
+   display:none !important;
+ }
+ a {
+   color:inherit !important;
  }
 }
 /*for google translate widget*/
